@@ -1,3 +1,4 @@
 /single-component-builder/lib
+/single-component-builder/src/*.*
 pnpm-lock.yaml
 node_modules
