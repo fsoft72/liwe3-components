@@ -1,0 +1,14 @@
+{
+  "name": "@liwe3/power-switch",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Fabio Rotondo",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.esm.js",
+  "types": "index.d.ts",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
