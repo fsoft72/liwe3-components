@@ -1,3 +1,6 @@
+import "../src/components/ThemeSwitcher/global.css";
+import "../src/components/ThemeSwitcher/variables.css";
+
 import "../src/components/Button/styles.css";
 import "../src/components/GrowButton/styles.css";
 import "../src/components/PowerSwitch/styles.css";

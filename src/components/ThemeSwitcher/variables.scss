@@ -1,0 +1,36 @@
+:root {
+	--main-font-family: 'Roboto', sans-serif;
+
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 1rem;
+	--space-4: 2rem;
+
+	--border-radius: 0.25rem;
+
+	--text-size: 20px;
+}
+
+.light {
+	--bg-color: rgba(72, 130, 183,1);
+	--bg-secondary-color: rgba(183, 132, 72, 1);
+	--text-color: #333;
+	--text-color-lighter: #666;
+
+	--main-bg-color: rgba(204, 204, 204, 1);
+	--main-bg-darker:rgba(153,153,153,1;) 
+
+
+	--border-color: #222;
+}
+
+.dark {
+	--bg-color: #666;
+	--text-color: white;
+	--text-color-lighter: #ccc;
+
+	--main-bg-color: #222;
+	--main-bg-darker: #333;
+
+	--border-color: #ccc;
+}

@@ -7,6 +7,8 @@ interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	placeholder?: string;
 	sx?: Record<string, any>;
 
+	type?: string;
+
 	validChars?: string;
 
 	onChange?: ( event: React.ChangeEvent<HTMLInputElement> ) => void;
@@ -41,7 +43,7 @@ const TextInput = ( props: TextInputProps ) => {
 	return (
 		<div className="liwe3-text-input">
 			<input
-				type="text"
+				type={props.type ?? "text"}
 				name={props.name}
 				required={props.required}
 				style={props.sx ?? {}}
