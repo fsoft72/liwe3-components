@@ -1,0 +1,46 @@
+.liwe3-text-input {
+    position: relative;
+    margin: 2.5rem auto;
+    width: 100%;
+}
+
+.liwe3-text-input input {
+    font-size: var(--text-size);
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+}
+
+.liwe3-text-input .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--text-color-lighter);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.liwe3-text-input input:focus~.label,
+.liwe3-text-input input:valid~.label {
+    top: -1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.liwe3-text-input .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.liwe3-text-input input[type="text"]:focus~.underline,
+.liwe3-text-input input[type="text"]:valid~.underline {
+    transform: scaleX(1);
+}
