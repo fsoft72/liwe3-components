@@ -1,0 +1,101 @@
+import React, { useState } from 'react';
+
+import Paginator from '@liwe3/react-paginator';
+
+interface Column {
+    name: string;
+    title?: string;
+    type: 'string' | 'int' | 'number' | 'date';
+    searchable?: boolean;
+    align?: 'left' | 'center' | 'right';
+}
+
+interface Action {
+    label: string;
+    onClick: ( row: any ) => void;
+    icon?: string;
+}
+
+interface Props {
+    columns: Column[];
+    data: any[];
+    actions?: Action[];
+}
+
+const ROWS_PER_PAGE = 10;
+
+const DataGrid: React.FC<Props> = ( { columns, data, actions } ) => {
+    const [ page, setPage ] = useState( 1 );
+    const [ searchTerm, setSearchTerm ] = useState( '' );
+    const filteredData = data.filter( ( row ) =>
+        Object.values( row ).some( ( value ) =>
+            typeof value === 'string' && value.includes( searchTerm )
+        )
+    );
+    const totalPages = Math.ceil( filteredData.length / ROWS_PER_PAGE );
+    const start = ( page - 1 ) * ROWS_PER_PAGE;
+    const end = start + ROWS_PER_PAGE;
+    const visibleData = filteredData.slice( start, end );
+
+    const doSearchTerm = ( term: string ) => {
+        setPage( 1 );
+        setSearchTerm( term );
+    };
+
+    const paginatorPageChange = ( page: number ) => {
+        setPage( page );
+    };
+
+    return (
+        <div className="liwe3-datagrid">
+            <table>
+                <thead>
+                    <tr>
+                        {columns.map( ( column ) => (
+                            <th key={column.name}>{column.title ?? column.name}</th>
+                        ) )}
+                        {actions && <th>Actions</th>}
+                    </tr>
+                    <tr>
+                        {columns.map( ( column ) =>
+                            column.searchable ? (
+                                <th key={column.name}>
+                                    <input
+                                        type="text"
+                                        placeholder={`Search ${ column.name }`}
+                                        value={searchTerm}
+                                        onChange={( e ) => doSearchTerm( e.target.value )}
+                                    />
+                                </th>
+                            ) : (
+                                <th key={column.name} />
+                            )
+                        )}
+                        {actions && <th />}
+                    </tr>
+                </thead>
+                <tbody>
+                    {visibleData.map( ( row, i ) => (
+                        <tr key={i}>
+                            {columns.map( ( column ) => (
+                                <td key={column.name} align={column.align ?? 'left'}>{row[ column.name ]}</td>
+                            ) )}
+                            {actions && (
+                                <td>
+                                    {actions.map( ( action, i ) => (
+                                        <button key={i} onClick={() => action.onClick( row )}>
+                                            {action.label}
+                                        </button>
+                                    ) )}
+                                </td>
+                            )}
+                        </tr>
+                    ) )}
+                </tbody>
+            </table>
+            <Paginator currentPage={page} totalRows={data.length} rowsPerPage={ROWS_PER_PAGE} onPageChange={paginatorPageChange} />
+        </div>
+    );
+};
+
+export default DataGrid;

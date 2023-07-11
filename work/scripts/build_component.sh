@@ -48,6 +48,7 @@ cp "$COMPONENTS_DIR/$COMPONENT_NAME/"* "$BUILD_DIR/src"
 
 # Move to the build directory
 cd "$BUILD_DIR"
+rm src/*stories*
 pnpm install
 
 # Build the component

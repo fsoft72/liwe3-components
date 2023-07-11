@@ -1,0 +1,23 @@
+.liwe3-paginator {
+    border: 1px solid #4444cc;
+    padding: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.liwe3-paginator button {
+    padding: 5px;
+    border: 1px solid #4444cc;
+    border-radius: 5px;
+    background-color: #4444cc;
+    color: #fff;
+    cursor: pointer;
+    min-width: 8em;
+}
+
+.liwe3-paginator button:hover {
+    background-color: #def132;
+    color: #000;
+}
