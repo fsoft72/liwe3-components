@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@liwe3/react-modal": "link:/home/fabio/dev/next/components/Modal",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
