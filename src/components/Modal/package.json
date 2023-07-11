@@ -1,5 +1,5 @@
 {
-  "name": "@liwe3/react-datagrid",
+  "name": "@liwe3/react-modal",
   "version": "0.0.1",
   "description": "",
   "author": "Fabio Rotondo",
@@ -9,8 +9,6 @@
   "types": "index.d.ts",
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@liwe3/react-paginator": "^0.0.1",
-    "@liwe3/react-modal": "^0.0.1"
+    "react-dom": "^18.2.0"
   }
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Paginator from '@liwe3/react-paginator';
+import Modal from '@liwe3/react-modal';
 
 interface Column {
     name: string;
@@ -123,28 +124,25 @@ const DataGrid: React.FC<Props> = ( { columns, data, actions } ) => {
                 rowsPerPage={ROWS_PER_PAGE}
                 onPageChange={paginatorPageChange}
             />
-            {showColumnsModal && (
-                <div className="liwe3-datagrid-columns-modal">
-                    <div className="liwe3-datagrid-columns-modal-content">
-                        <h2>Columns</h2>
-                        {columns.map( ( column ) => (
-                            <div key={column.name}>
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        checked={visibleColumns.includes( column.name )}
-                                        onChange={() => toggleColumnVisibility( column.name )}
-                                    />
-                                    {column.title ?? column.name}
-                                </label>
-                            </div>
-                        ) )}
-                        <div className="liwe3-datagrid-columns-modal-buttons">
-                            <button onClick={handleColumnsModalSave}>OK</button>
+            {showColumnsModal &&
+                <Modal
+                    title="Columns"
+                    body={columns.map( ( column ) => (
+                        <div key={column.name}>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    checked={visibleColumns.includes( column.name )}
+                                    onChange={() => toggleColumnVisibility( column.name )}
+                                />
+                                {column.title ?? column.name}
+                            </label>
                         </div>
-                    </div>
-                </div>
-            )}
+                    ) )}
+
+                    onOk={handleColumnsModalSave}
+                />
+            }
         </div>
     );
 };
