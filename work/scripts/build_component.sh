@@ -20,6 +20,8 @@ fi
 
 COMPONENT_NAME=$1
 
+# If COMPONENT_NAME ends with a slash, remove it
+COMPONENT_NAME=${COMPONENT_NAME%/}
 
 # We keep only the last part of the path
 COMPONENT_NAME=${COMPONENT_NAME##*/}
