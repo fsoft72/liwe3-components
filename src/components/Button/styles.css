@@ -1,0 +1,15 @@
+.liwe3-button {
+	cursor: pointer;
+
+	padding: 10px;
+	border-radius: 5px;
+
+	border-color: var(--bg-color);
+
+	&:hover {
+		background-color: red;
+	}
+
+	color: var(--text-color);
+	background-color: var(--bg-color);
+}
