@@ -8,7 +8,9 @@ BUILD_DIR="single-component-builder"
 
 # if no argument is provided, print usage and exit
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 <component directory>"
+    echo "Usage: $0 <component directory> [<destination directory>]"
+    echo ""
+    echo "- destination directory is optional and if provided, the component will be copied inside it"
     exit 1
 fi
 
@@ -19,6 +21,7 @@ if [ ! -e single-component-builder ]; then
 fi
 
 COMPONENT_NAME=$1
+DESTINATION_DIR=$2
 
 # If COMPONENT_NAME ends with a slash, remove it
 COMPONENT_NAME=${COMPONENT_NAME%/}
@@ -49,3 +52,20 @@ pnpm install
 
 # Build the component
 ./build.sh
+
+# If DESTINATION_DIR is provided, copy the component to it
+if [ ! -z "$DESTINATION_DIR" ]; then
+    # If DESTINATION_DIR ends with a slash, remove it
+    DESTINATION_DIR=${DESTINATION_DIR%/}
+
+    # if DESTINATION_DIR does not exist, create it
+    if [ ! -e "$DESTINATION_DIR" ]; then
+        mkdir -p "$DESTINATION_DIR"
+    fi
+
+    # Create the $DESTINATION_DIR/$COMPONENT_NAME directory
+    mkdir -p "$DESTINATION_DIR/$COMPONENT_NAME"
+
+    # Copy the component to DESTINATION_DIR
+    cp lib/* "$DESTINATION_DIR/$COMPONENT_NAME"
+fi
