@@ -11,7 +11,7 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@liwe/react-paginator": "^0.0.1",
-    "@liwe/react-modal": "^0.0.1"
+    "@liwe/react-paginator": "*",
+    "@liwe/react-modal": "*"
   }
 }
