@@ -1,6 +1,6 @@
 {
   "name": "@liwe/react-power-switch",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A React component to create a power switch",
   "author": "Fabio Rotondo",
   "license": "MIT",
