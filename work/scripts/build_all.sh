@@ -5,7 +5,7 @@
 
 # if no argument is provided, print usage and exit
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 <components directory> <destination directory>"
+    echo "Usage: $0 <destination directory>"
     echo ""
     exit 1
 fi
