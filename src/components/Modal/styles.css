@@ -5,40 +5,39 @@ and blur the background with a darker color */
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 9998;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.5);
-
+    background-color: var(--liwe-main-bg-color);
     /* blur the background */
-
+    filter: blur(2px);
+    opacity: 0.8;
 }
 
 /* centers the modal window on the screen */
-.liwe3-modal .content {
+.liwe3-modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     border: 1px solid #ccc;
     padding: 0.3rem 1rem 1rem 1rem;
-
-    background-color: var(--bg-color);
+    background-color: var(--liwe-main-bg-color);
+    z-index: 9999;
 }
 
-.liwe3-modal .content .header {
+.liwe3-modal-content .header {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-.liwe3-modal .content .body {
+.liwe3-modal-content .body {
     font-size: 1rem;
     margin-bottom: 1rem;
 }
 
-.liwe3-modal .content .footer {
+.liwe3-modal-content .footer {
     text-align: right;
 }

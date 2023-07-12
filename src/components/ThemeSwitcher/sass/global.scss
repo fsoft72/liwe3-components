@@ -1,0 +1,581 @@
+@import 'typography';
+@import 'screens';
+@import 'layout';
+@import 'mixins/layout';
+
+html {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-size: var(--liwe-font-size);
+}
+
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+
+	background-color: var(--liwe-main-bg-color);
+
+	font-family: var(--liwe-font-family);
+	font-size: var(--liwe-font-size);
+	font-weight: var(--liwe-font-weight);
+	color: var(--liwe-default-color); 
+}
+
+/* Typography */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: calc((var(--liwe-font-weight) /2) * 3);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: $liweDefaultLetterSpacing;
+  text-align: $liweDefaultTextAlign;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: calc((var(--liwe-font-weight) /2) * 3);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: $liweDefaultLetterSpacing;
+  text-align: $liweDefaultTextAlign;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: calc((var(--liwe-font-weight) /2) * 3);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: $liweDefaultLetterSpacing;
+  text-align: $liweDefaultTextAlign;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: calc((var(--liwe-font-weight) /2) * 3);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: $liweDefaultLetterSpacing;
+  text-align: $liweDefaultTextAlign;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: calc((var(--liwe-font-weight) /2) * 3);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: $liweDefaultLetterSpacing;
+  text-align: $liweDefaultTextAlign;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: calc((var(--liwe-font-weight) /2) * 3);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: $liweDefaultLetterSpacing;
+  text-align: $liweDefaultTextAlign;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: var(--liwe-font-weight);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+}
+
+a {
+  font-size: 1rem;
+  font-weight: var(--liwe-font-weight);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+}
+
+li {
+  font-size: 1rem;
+  font-weight: var(--liwe-font-weight);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+}
+
+blockquote {
+  font-size: 1rem;
+  font-weight: var(--liwe-font-weight);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+}
+
+small {
+  font-size: 0.875rem;
+  font-weight: var(--liwe-font-weight);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+}
+
+code {
+  font-size: 1rem;
+  font-weight: var(--liwe-font-weight);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+}
+
+pre {
+  font-size: 1rem;
+  font-weight: var(--liwe-font-weight);
+
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+}
+
+kbd {
+  font-size: 1rem;
+  font-weight: var(--liwe-font-weight);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+}
+
+strong {
+  font-size: 1rem;
+  font-weight: calc((var(--liwe-font-weight) /2) * 3);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+}
+
+input {
+  font-size: var(--liwe-font-size); 
+  font-weight: var(--liwe-font-weight);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+
+  &::placeholder {
+    font-size: 1rem;
+    font-weight: var(--liwe-font-weight);
+    line-height: $liweDefaultLineHeight;
+    letter-spacing: 0;
+    text-align: $liweDefaultTextAlign;
+  }
+}
+
+button {
+    padding: .25rem 1rem;
+    border: 1px solid var(--liwe-darker-primary-color);
+    border-radius: var(--liwe-border-radius); 
+    background-color: var(--liwe-primary-color);
+    color: var(--liwe-default-color);
+    font-size: var(--liwe-font-size);
+}
+
+button:hover {
+    background-color: var(--liwe-lighter-primary-color);
+    color: var(--liwe-default-color);
+}
+
+.liwe-lead{
+	font-size: 1.25rem;
+	font-weight: calc((var(--liwe-font-weight) /2) * 2.5);
+	line-height: $liweDefaultLineHeight;
+	letter-spacing: 0;
+	text-align: $liweDefaultTextAlign;
+}
+
+/* LAYOUT */
+
+/* flex */
+.liwe-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.liwe-flex-start {
+  justify-content: liwe-flex-start !important;
+}
+
+.liwe-flex-end {
+  justify-content: liwe-flex-end !important;
+}
+
+.liwe-flex-center {
+  justify-content: center !important;
+}
+
+.liwe-flex-between {
+  justify-content: space-between !important;
+}
+
+.liwe-flex-around {
+  justify-content: space-around !important;
+}
+
+.liwe-flex-evenly {
+  justify-content: space-evenly !important;
+}
+
+.liwe-flex-top {
+  align-items: liwe-flex-start !important;
+}
+
+.liwe-flex-bottom {
+  align-items: liwe-flex-end !important;
+}
+
+.liwe-flex-middle {
+  align-items: center !important;
+}
+
+.liwe-flex-stretch {
+  align-items: stretch !important;
+}
+
+.liwe-flex-baseline {
+  align-items: baseline !important;
+}
+
+.liwe-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: -#{($liweGuttersX)};
+}
+
+.liwe-col {
+  position: relative;
+  width: 100%;
+}
+
+.liwe-col1 {
+	@include liweCol(1, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col2 {
+	@include liweCol(2, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col3 {
+	@include liweCol(3, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col4 {
+	@include liweCol(4, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col5 {
+	@include liweCol(5, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col6 {
+	@include liweCol(6, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col7 {
+	@include liweCol(7, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col8 {
+	@include liweCol(8, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col9 {
+	@include liweCol(9, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col10 {
+	@include liweCol(10, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col11 {
+	@include liweCol(11, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col12 {
+	@include liweCol(12, $liweGuttersX, $liweGuttersY);
+}
+
+.liwe-col-offset1 {
+  margin-left: 8.333333%;
+}
+
+.liwe-col-offset2 {
+  margin-left: 16.666667%;
+}
+
+.liwe-col-offset3 {
+  margin-left: 25%;
+}
+
+.liwe-col-offset4 {
+  margin-left: 33.333333%;
+}
+
+.liwe-col-offset5 {
+  margin-left: 41.666667%;
+}
+
+.liwe-col-offset6 {
+  margin-left: 50%;
+}
+
+.liwe-col-offset7 {
+  margin-left: 58.333333%;
+}
+
+.liwe-col-offset8 {
+  margin-left: 66.666667%;
+}
+
+.liwe-col-offset9 {
+  margin-left: 75%;
+}
+
+.liwe-col-offset10 {
+  margin-left: 83.333333%;
+}
+
+.liwe-col-offset11 {
+  margin-left: 91.666667%;
+}
+
+/* colors */
+
+.liwe-bg-main {
+  background-color: var(--liwe-main-bg-color);
+}
+
+.liwe-bg-primary {
+  background-color: var(--liwe-primary-color);
+}
+
+.liwe-bg-primary-dark {
+  background-color: var(--liwe-darker-primary-color);
+}
+
+.liwe-bg-primary-light {
+  background-color: var(--liwe-lighter-primary-color);
+}
+
+.liwe-bg-primary-comp {
+  background-color: var(--liwe-comp-primary-color);
+}
+
+.liwe-bg-secondary {
+  background-color: var(--liwe-secondary-color);
+}
+
+.liwe-bg-secondary-dark {
+  background-color: var(--liwe-darker-secondary-color);
+}
+
+.liwe-bg-secondary-light {
+  background-color: var(--liwe-lighter-secondary-color);
+}
+
+.liwe-bg-secondary-comp {
+  background-color: var(--liwe-comp-secondary-color);
+}
+
+.liwe-bg-light {
+  background-color: var(--liwe-lighter-secondary-color);
+}
+.liwe-bg-success {
+  background-color: var(--liwe-success-color);
+}
+
+.liwe-bg-danger {
+  background-color: var(--liwe-danger-color);
+}
+
+.liwe-bg-warning {
+  background-color: var(--liwe-warning-color);
+}
+
+.liwe-bg-info {
+  background-color: var(--liwe-info-color);
+}
+
+.liwe-bg-light {
+  background-color: var(--liwe-light-color);
+}
+
+.liwe-bg-dark {
+  background-color: var(--liwe-dark-color);
+}
+
+.liwe-txt-primary {
+  color: var(--liwe-primary-color);
+}
+
+.liwe-txt-primary-dark {
+  color: var(--liwe-darker-primary-color);
+}
+
+.liwe-txt-primary-light {
+  color: var(--liwe-lighter-primary-color);
+}
+
+.liwe-txt-primary-comp {
+  color: var(--liwe-comp-primary-color);
+}
+
+.liwe-txt-secondary {
+  color: var(--liwe-secondary-color);
+}
+
+.liwe-txt-secondary-dark {
+  color: var(--liwe-darker-secondary-color);
+}
+
+.liwe-txt-secondary-light {
+  color: var(--liwe-lighter-secondary-color);
+}
+
+.liwe-txt-secondary-comp {
+  color: var(--liwe-comp-secondary-color);
+}
+
+.liwe-txt-light {
+  color: var(--liwe-light-color);
+
+}
+.liwe-txt-dark {
+  color: var(--liwe-dark-color);
+}
+
+.liwe-txt-success {
+  color: var(--liwe-success-color);
+}
+
+.liwe-txt-danger {
+  color: var(--liwe-danger-color);
+}
+
+.liwe-txt-warning {
+  color: var(--liwe-warning-color);
+}
+
+.liwe-txt-info {
+  color: var(--liwe-info-color);
+}
+
+@media (max-width: #{$liweXs}) {
+  .liwe-container {
+    max-width: calc(#{$liweXs} - 1rem);
+  }
+}
+
+@media (min-width: #{$liweSm}) {
+  .liwe-container {
+    max-width: calc(#{$liweSm} - 2rem);
+  }
+}
+
+@media (min-width: #{$liweMd}) {
+  .liwe-container {
+    max-width: calc(#{$liweMd} - 3rem);
+  }
+}
+
+@media (min-width: #{$liweLg}) {
+  .liwe-container {
+    max-width: calc(#{$liweLg} - 3rem);
+  }
+}
+
+@media (min-width: #{$liweXl}) {
+  .liwe-container {
+    max-width: calc(#{$liweXl} - 3rem);
+  }
+}
+
+@media (min-width: #{$liweXxl}) {
+  .liwe-container {
+    max-width: calc(#{$liweXxl} - 3rem);
+  }
+}
+
+/* Basic editor styles */
+.ProseMirror {
+	border: 1px solid var(--border-color);
+	padding: 8px;
+	min-height: 300px;
+
+	>*+* {
+		margin-top: 0.75em;
+	}
+
+	pre {
+		background: var(--liwe-main-bg-color);
+		border-radius: 0.5rem;
+		color: var(--liwe-default-color);
+		font-family: var(--liwe-font-family); 
+		padding: 0.75rem 1rem;
+
+		code {
+			background: none;
+			color: inherit;
+			font-size: 0.8rem;
+			padding: 0;
+		}
+
+		.hljs-comment,
+		.hljs-quote {
+			color: var(--liwe-info-color);
+		}
+
+		.hljs-variable,
+		.hljs-template-variable,
+		.hljs-attribute,
+		.hljs-tag,
+		.hljs-name,
+		.hljs-regexp,
+		.hljs-link,
+		.hljs-name,
+		.hljs-selector-id,
+		.hljs-selector-class {
+			color: var(--liwe-light-color);
+		}
+
+		.hljs-number,
+		.hljs-meta,
+		.hljs-built_in,
+		.hljs-builtin-name,
+		.hljs-literal,
+		.hljs-type,
+		.hljs-params {
+			color: var(--liwe-warning-color);
+		}
+
+		.hljs-string,
+		.hljs-symbol,
+		.hljs-bullet {
+			color: var(--liwe-success-color);
+		}
+
+		.hljs-title,
+		.hljs-section {
+			color: var(--liwe-danger-color);
+		}
+
+		.hljs-keyword,
+		.hljs-selector-tag {
+			color: var(--liwe-primary-color);
+		}
+
+		.hljs-emphasis {
+			font-style: italic;
+		}
+
+		.hljs-strong {
+			font-weight: 700;
+		}
+	}
+}

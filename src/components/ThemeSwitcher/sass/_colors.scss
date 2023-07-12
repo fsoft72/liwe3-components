@@ -1,0 +1,41 @@
+@import 'functions/colors';
+
+// dark theme colors
+$liwePrimaryColor: rgba(155, 19, 102, 1);
+$liweDarkerPrimaryColor: liweDarkerColor($liwePrimaryColor);
+$liweLighterPrimaryColor: liweLighterColor($liwePrimaryColor);
+$liweCompPrimaryColor: liweComplementaryColor($liwePrimaryColor);
+
+$liweSecondaryColor: rgba(66, 66, 66, 1);
+$liweDarkerSecondaryColor: liweDarkerColor($liweSecondaryColor);
+$liweLighterSecondaryColor: liweLighterColor($liweSecondaryColor);
+$liweCompSecondaryColor: liweComplementaryColor($liweSecondaryColor);
+
+$liweMainBgColor: $liweSecondaryColor;
+$liweDangerColor: rgba(175, 127, 245, 1);
+$liweWarningColor: rgba(255, 161, 97, 1);
+$liweInfoColor: rgba(88, 132 ,241, 1);
+$liweSuccessColor: rgba(98, 255, 236, 1);
+$liweLightColor: rgba(202, 235, 242, 1);
+$liweDarkColor: rgba(30, 9, 9, 1);
+
+// light theme colors
+$liwePrimaryColorLight: rgba(169, 169, 169, 1);
+$liweDarkerPrimaryColorLight: liweDarkerColor($liwePrimaryColorLight);
+$liweLighterPrimaryColorLight: liweLighterColor($liwePrimaryColorLight);
+$liweCompPrimaryColorLight: liweComplementaryColor($liwePrimaryColorLight);
+
+$liweSecondaryColorLight: rgba(202, 235, 242, 1);
+$liweDarkerSecondaryColorLight: liweDarkerColor($liweSecondaryColorLight);
+$liweLighterSecondaryColorLight: liweLighterColor($liweSecondaryColorLight);
+$liweCompSecondaryColorLight: liweComplementaryColor($liweSecondaryColorLight);
+
+$liweMainBgColorLight: rgba(239, 239, 239, 1);
+
+$liweDangerColorLight: rgba(255, 59, 63, 1);
+$liweWarningColorLight: rgba(52, 40.5, 79, 1);
+$liweInfoColorLight: rgba(3, 20 ,74, 1);
+$liweSuccessColorLight: rgba(3, 88, 86, 1);
+$liweLightColorLight: rgba(255, 255, 255, 1);
+$liweDarkColorLight: rgba(9, 9, 40, 1);
+// Path: src/components/ThemeSwitcher/sass/_colors.scss

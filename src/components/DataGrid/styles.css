@@ -1,31 +1,42 @@
 .liwe3-datagrid {
     position: relative;
     width: calc(100% - 16px);
-    border: 1px solid black;
-    padding: 8px;
+    border: 1px solid var(--liwe-lighter-primary-color);
+    padding: .5rtem;
+    color: var(--liwe-default-color);
 }
 
 .liwe3-datagrid table {
     width: 100%;
     border-collapse: collapse;
+    border: 1px solid var(--liwe-darker-primary-color);
+    color: var(--liwe-default-color);
 }
 
 .liwe3-datagrid th,
 .liwe3-datagrid td {
-    border: 1px solid lightgrey;
-    padding: 8px;
+    padding: .5rem;
+}
+
+.liwe3-datagrid td:not(:first-child) {
+    border-left: 1px solid var(--liwe-darker-primary-color);
+}
+
+.liwe3-datagrid tr:not(:first-child) td {
+    border-top: 1px solid var(--liwe-darker-primary-color);
 }
 
 .liwe3-datagrid th {
-    background-color: #577eff;
+    background-color: var(--liwe-bg-primary);
+    border: 1px solid var(--liwe-darker-primary-color);
 }
 
 .liwe3-datagrid tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--liwe-main-bg-color);
 }
 
 .liwe3-datagrid tr:not(:first-child):hover {
-    background-color: #ddd;
+    background-color: var(--liwe-darker-primary-color);
 }
 
 .liwe3-datagrid .pagination {

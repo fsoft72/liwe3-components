@@ -1,0 +1,90 @@
+@import 'colors';
+@import 'layout';
+@import 'typography';
+@import 'functions/colors';
+
+
+:root {
+	--liwe-main-font-family: #{$liweDefaultFontFamily};
+
+	--liwe-space-1: 0.25rem;
+	--liwe-space-2: 0.5rem;
+	--liwe-space-3: 1rem;
+	--liwe-space-4: 2rem;
+
+	--liwe-border-radius: 0.25rem;
+	
+	--liwe-font-family: #{$liweDefaultFontFamily};
+	--liwe-font-weight: #{$liweDefaultFontWeight};
+	--liwe-font-size: #{$liweDefaultFontSize};
+	--liwe-border-radius: #{$liweBorderRadius};
+}
+
+// LIGHT THEME
+.liwe-light-theme {
+
+	--liwe-primary-color : #{$liwePrimaryColorLight};
+	--liwe-darker-primary-color : #{$liweDarkerPrimaryColorLight}; 
+	--liwe-lighter-primary-color : #{$liweLighterPrimaryColorLight};
+	--liwe-comp-primary-color : #{$liweCompPrimaryColorLight};
+
+	--liwe-secondary-color : #{$liweSecondaryColorLight};
+	--liwe-darker-secondary-color : #{$liweDarkerSecondaryColorLight};
+	--liwe-lighter-secondary-color : #{$liweLighterSecondaryColorLight};
+	--liwe-comp-secondary-color : #{$liweCompSecondaryColorLight};
+
+	--liwe-main-bg-color : #{$liweMainBgColorLight};
+
+	--liwe-default-color : #{$liweDarkerPrimaryColorLight};
+	--liwe-danger-color : #{$liweDangerColorLight};
+	--liwe-warning-color : #{$liweWarningColorLight};
+	--liwe-info-color : #{$liweInfoColorLight};
+	--liwe-success-color : #{$liweSuccessColorLight};
+	--liwe-light-color : #{$liweLightColorLight};
+	--liwe-dark-color : #{$liweDarkColorLight};
+
+	// LEGACY
+	--bg-color: rgba(72, 130, 183,1);
+	--bg-secondary-color: rgba(183, 132, 72, 1);
+	--text-color: #333;
+	--text-color-lighter: #666;
+
+	--main-bg-color: rgba(204, 204, 204, 1);
+	--main-bg-darker:rgba(153,153,153,1;) 
+
+	--border-color: #222;
+}
+
+// DARK THEME
+.liwe-dark-theme {
+
+	--liwe-primary-color : #{$liwePrimaryColor};
+	--liwe-darker-primary-color : #{$liweDarkerPrimaryColor};
+	--liwe-lighter-primary-color : #{$liweLighterPrimaryColor};
+	--liwe-comp-primary-color : #{$liweCompPrimaryColor};
+	
+	--liwe-secondary-color : #{$liweSecondaryColor};
+	--liwe-darker-secondary-color : #{$liweDarkerSecondaryColor};
+	--liwe-lighter-secondary-color : #{$liweLighterSecondaryColor};
+	--liwe-comp-secondary-color : #{$liweCompSecondaryColor};
+
+	--liwe-main-bg-color : #{$liweMainBgColor};
+
+	--liwe-default-color : #{$liweLightColor};
+	--liwe-danger-color : #{$liweDangerColor};
+	--liwe-warning-color : #{$liweWarningColor};
+	--liwe-info-color : #{$liweInfoColor};
+	--liwe-success-color : #{$liweSuccessColor};
+	--liwe-light-color : #{$liweLightColor};
+	--liwe-dark-color : #{$liweDarkColor};
+
+	// LEGACY
+	--bg-color: #666;
+	--text-color: white;
+	--text-color-lighter: #ccc;
+
+	--main-bg-color: #222;
+	--main-bg-darker: #333;
+
+	--border-color: #ccc;
+}

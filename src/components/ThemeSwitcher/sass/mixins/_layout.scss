@@ -1,0 +1,9 @@
+@import '../layout';
+
+@mixin liweCol($cols, $gutter-x, $gutter-y) {
+	flex: 0 0 calc(100 / #{$liweGridColumns} * #{$cols} * 1%);
+	max-width: calc((100 / #{$liweGridColumns} * #{$cols} * 1%) - #{$gutter-x} *2); 
+	max-height: calc(100% - #{$gutter-y} *2);
+	margin: $gutter-y $gutter-x;
+}
+// Path: src/components/ThemeSwitcher/sass/mixins/_layout.scss

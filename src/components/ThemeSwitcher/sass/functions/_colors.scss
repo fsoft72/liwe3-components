@@ -1,0 +1,15 @@
+@function liweDarkerColor($color, $amount: 20%) {
+	$new-color: darken($color, $amount);
+	@return $new-color;
+};
+
+@function liweLighterColor($color, $amount: 20%) {
+	$new-color: lighten($color, $amount);
+	@return $new-color;
+};
+
+@function liweComplementaryColor($color) {
+	$new-color: complement($color);
+	@return $new-color;
+};
+// Path: src/components/ThemeSwitcher/sass/mixins/_colors.scss

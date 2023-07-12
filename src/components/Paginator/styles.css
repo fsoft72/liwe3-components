@@ -1,23 +1,26 @@
 .liwe3-paginator {
-    border: 1px solid #4444cc;
-    padding: 5px;
+    border: 1px solid var(--liwe-darker-primary-color);
+    padding: .5rem;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--liwe-default-color);
+    font-size: var(--liwe-font-size);
 }
 
 .liwe3-paginator button {
-    padding: 5px;
-    border: 1px solid #4444cc;
-    border-radius: 5px;
-    background-color: #4444cc;
-    color: #fff;
+    padding: .5rem;
+    border: 1px solid var(--liwe-darker-primary-color);
+    border-radius: var(--liwe-border-radius); 
+    background-color: var(--liwe-primary-color);
+    color: var(--liwe-default-color);
     cursor: pointer;
     min-width: 8em;
+    font-size: var(--liwe-font-size);
 }
 
 .liwe3-paginator button:hover {
-    background-color: #def132;
-    color: #000;
+    background-color: var(--liwe-lighter-primary-color);
+    color: var(--liwe-default-color);
 }
