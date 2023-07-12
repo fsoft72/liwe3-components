@@ -50,8 +50,8 @@ cd $COMPONENTS_DIR/$COMPONENT_NAME
 # The build number is the last number in the version number
 # The build number is incremented by 1
 
-# Get the version number from the package.json
-version=$(jq -r '.version' package.json)
+# Get the version number from the package.json using grep
+version=$(grep -oP '(?<="version": ")[^"]*' package.json)
 
 # Get the build number from the version number
 build=$(echo $version | cut -d. -f3)
@@ -62,9 +62,10 @@ build=$(($build + 1))
 # Create the new version number
 new_version=$(echo $version | cut -d. -f1,2).$build
 
-# Update the version number in the package.json
-jq ".version = \"$new_version\"" package.json > package.json.tmp
-mv package.json.tmp package.json
+echo "=== Building version $new_version"
+
+# Update the version number in the package.json file
+sed -i "s/\"version\": \"$version\"/\"version\": \"$new_version\"/" package.json
 
 cd -
 

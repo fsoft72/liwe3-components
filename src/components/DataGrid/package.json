@@ -1,7 +1,7 @@
 {
   "name": "@liwe/react-datagrid",
   "description": "A simple DataGrid",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "author": "Fabio Rotondo",
   "license": "MIT",
   "main": "index.js",
