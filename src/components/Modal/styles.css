@@ -21,9 +21,10 @@ and blur the background with a darker color */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid #ccc;
+    border: 1px solid var(--liwe-lighter-secondary-color);
+    border-radius: var(--liwe-border-radius);
     padding: 0.3rem 1rem 1rem 1rem;
-    background-color: var(--liwe-main-bg-color);
+    background-color: var(--liwe-darker-secondary-color);
     z-index: 9999;
 }
 
