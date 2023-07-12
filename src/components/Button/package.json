@@ -1,12 +1,13 @@
 {
-  "name": "@liwe3/react-button",
+  "name": "@liwe/react-button",
   "version": "0.0.1",
-  "description": "",
+  "description": "A LiWE3 Button component",
   "author": "Fabio Rotondo",
   "license": "MIT",
   "main": "index.js",
   "module": "index.esm.js",
   "types": "index.d.ts",
+  "private": false,
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

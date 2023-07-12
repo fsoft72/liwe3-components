@@ -1,12 +1,13 @@
 {
-  "name": "@liwe3/react-grow-button",
+  "name": "@liwe/react-grow-button",
   "version": "0.0.1",
-  "description": "",
+  "description": "An animated button",
   "author": "Fabio Rotondo",
   "license": "MIT",
   "main": "index.js",
   "module": "index.esm.js",
   "types": "index.d.ts",
+  "private": false,
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

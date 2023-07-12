@@ -1,16 +1,17 @@
 {
-  "name": "@liwe3/react-datagrid",
+  "name": "@liwe/react-datagrid",
+  "description": "A simple DataGrid",
   "version": "0.0.1",
-  "description": "",
   "author": "Fabio Rotondo",
   "license": "MIT",
   "main": "index.js",
   "module": "index.esm.js",
   "types": "index.d.ts",
+  "private": false,
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@liwe3/react-paginator": "^0.0.1",
-    "@liwe3/react-modal": "^0.0.1"
+    "@liwe/react-paginator": "^0.0.1",
+    "@liwe/react-modal": "^0.0.1"
   }
 }
