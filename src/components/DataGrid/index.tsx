@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import Paginator from '@liwe3/react-paginator';
-import Modal from '@liwe3/react-modal';
+import Paginator from '@liwe/react-paginator';
+import Modal from '@liwe/react-modal';
 
 interface Column {
     name: string;
