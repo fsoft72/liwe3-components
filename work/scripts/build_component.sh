@@ -43,6 +43,31 @@ if [ ! -e "$COMPONENTS_DIR/$COMPONENT_NAME/package.json" ]; then
     exit 1
 fi
 
+cd $COMPONENTS_DIR/$COMPONENT_NAME
+
+# Change the package.json version number by adding a +1 in the last build number
+# The version number is in the format x.y.z
+# The build number is the last number in the version number
+# The build number is incremented by 1
+
+# Get the version number from the package.json
+version=$(jq -r '.version' package.json)
+
+# Get the build number from the version number
+build=$(echo $version | cut -d. -f3)
+
+# Increment the build number
+build=$(($build + 1))
+
+# Create the new version number
+new_version=$(echo $version | cut -d. -f1,2).$build
+
+# Update the version number in the package.json
+jq ".version = \"$new_version\"" package.json > package.json.tmp
+mv package.json.tmp package.json
+
+cd -
+
 # Copy all data from the component directory to the build directory
 cp "$COMPONENTS_DIR/$COMPONENT_NAME/"* "$BUILD_DIR/src"
 
