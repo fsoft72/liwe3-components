@@ -2,3 +2,4 @@
 /single-component-builder/src/*.*
 pnpm-lock.yaml
 node_modules
+dist/components

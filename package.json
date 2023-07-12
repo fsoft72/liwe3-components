@@ -16,11 +16,11 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@liwe3/react-button": "link:../components/Button",
-    "@liwe3/react-modal": "link:/home/fabio/dev/projects/nextjs/components/Modal",
-    "@liwe3/react-paginator": "link:/home/fabio/dev/projects/nextjs/components/Paginator",
-    "@liwe3/react-power-switch": "link:../components/PowerSwitch",
-    "@liwe3/react-text-input": "link:../components/TextInput",
+    "@liwe3/react-button": "link:./dist/components/Button",
+    "@liwe3/react-modal": "link:./dist/components/Modal",
+    "@liwe3/react-paginator": "link:./dist/components/Paginator",
+    "@liwe3/react-power-switch": "link:./dist/components/PowerSwitch",
+    "@liwe3/react-text-input": "link:./dist/components/TextInput",
     "@storybook/addon-essentials": "^7.0.26",
     "@storybook/addon-interactions": "^7.0.26",
     "@storybook/addon-links": "^7.0.26",
