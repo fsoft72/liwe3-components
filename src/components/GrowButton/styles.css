@@ -24,7 +24,7 @@
     margin: 0;
     width: 3rem;
     height: 3rem;
-    background: var(--bg-color);
+    background: var(--liwe-main-bg-color);
     border-radius: 1.625rem;
 }
 
@@ -34,8 +34,8 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    background: var(--text-color);
-    color: var(--main-bg-color);
+    background: var(--liwe-default-color);
+    color: var(--liwe-main-bg-color);
 }
 
 .liwe3-grow-button.box .circle .icon.arrow {
@@ -53,8 +53,8 @@
     right: 0.0625rem;
     width: 0.625rem;
     height: 0.625rem;
-    border-top: 0.125rem solid var(--main-bg-color);
-    border-right: 0.125rem solid var(--main-bg-color);
+    border-top: 0.125rem solid var(--liwe-main-bg-color);
+    border-right: 0.125rem solid var(--liwe-main-bg-color);
     transform: rotate(45deg);
 }
 
@@ -67,7 +67,7 @@
     bottom: 0;
     padding: 0.70rem 0;
     margin: 0 0 0 1.85rem;
-    color: var(--text-color-lighter);
+    color: var(--liwe-lighter-secondary-color);
     font-size: 0.97rem;
     font-weight: 700;
     line-height: 1.6;
@@ -80,10 +80,10 @@
 }
 
 .liwe3-grow-button:hover .circle .icon.arrow {
-    background: var(--main-bg-color);
+    background: var(--liwe-main-bg-color);
     transform: translate(1rem, 0);
 }
 
 .liwe3-grow-button:hover .text {
-    color: var(--main-bg-color);
+    color: var(--liwe-main-bg-color);
 }

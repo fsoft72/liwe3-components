@@ -12,6 +12,7 @@ type Story = StoryObj<typeof YourComponent>;
 
 export const FirstStory: Story = {
 	args: {
-		//👇 The args you need here will depend on your component
+        label: 'GrowButton', 
+        onClick: () => alert( 'Button clicked' ),
 	},
 };

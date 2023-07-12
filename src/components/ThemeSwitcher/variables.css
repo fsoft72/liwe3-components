@@ -32,9 +32,8 @@
   --text-color: #333;
   --text-color-lighter: #666;
   --main-bg-color: rgba(204, 204, 204, 1);
-  --main-bg-darker:rgba(153,153,153,1;) 
-
-	--border-color: #222; }
+  --main-bg-darker:rgba(153,153,153,1);
+  --border-color: #222; }
 
 .liwe-dark-theme {
   --liwe-primary-color: #9b1366;

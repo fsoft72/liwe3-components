@@ -1,8 +1,12 @@
 import React from 'react';
+export interface ButtonProps {
+	label: string;
+	onClick?: () => void;
+}
 
-const Button = () => {
+const Button = ( { label, onClick }: ButtonProps ) => {
 	return (
-		<button className="liwe3-button">Click me</button>
+		<button onClick={onClick} className="liwe3-button">{label}</button>
 	);
 };
 
