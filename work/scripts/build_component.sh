@@ -8,7 +8,7 @@ BUILD_DIR="single-component-builder"
 
 # if no argument is provided, print usage and exit
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 <component directory> [<destination directory>]"
+    echo "Usage: $0 <component directory> [--version]"
     echo ""
     echo "- destination directory is optional and if provided, the component will be copied inside it"
     exit 1
@@ -21,7 +21,18 @@ if [ ! -e single-component-builder ]; then
 fi
 
 COMPONENT_NAME=$1
-DESTINATION_DIR=$2
+
+# Get current working directory
+CURRENT_DIR=$(pwd)
+
+DESTINATION_DIR=$CURRENT_DIR/dist/components
+
+# If --version is provided we change the version number in the package.json file
+if [ "$2" == "--version" ]
+then
+    DO_VERSION=1
+fi
+
 
 # If COMPONENT_NAME ends with a slash, remove it
 COMPONENT_NAME=${COMPONENT_NAME%/}
@@ -43,31 +54,34 @@ if [ ! -e "$COMPONENTS_DIR/$COMPONENT_NAME/package.json" ]; then
     exit 1
 fi
 
-cd $COMPONENTS_DIR/$COMPONENT_NAME
+if [ "$DO_VERSION" == "1" ]
+then
+    cd $COMPONENTS_DIR/$COMPONENT_NAME
 
-# Change the package.json version number by adding a +1 in the last build number
-# The version number is in the format x.y.z
-# The build number is the last number in the version number
-# The build number is incremented by 1
+    # Change the package.json version number by adding a +1 in the last build number
+    # The version number is in the format x.y.z
+    # The build number is the last number in the version number
+    # The build number is incremented by 1
 
-# Get the version number from the package.json using grep
-version=$(grep -oP '(?<="version": ")[^"]*' package.json)
+    # Get the version number from the package.json using grep
+    version=$(grep -oP '(?<="version": ")[^"]*' package.json)
 
-# Get the build number from the version number
-build=$(echo $version | cut -d. -f3)
+    # Get the build number from the version number
+    build=$(echo $version | cut -d. -f3)
 
-# Increment the build number
-build=$(($build + 1))
+    # Increment the build number
+    build=$(($build + 1))
 
-# Create the new version number
-new_version=$(echo $version | cut -d. -f1,2).$build
+    # Create the new version number
+    new_version=$(echo $version | cut -d. -f1,2).$build
 
-echo "=== Building version $new_version"
+    echo "=== Building version $new_version"
 
-# Update the version number in the package.json file
-sed -i "s/\"version\": \"$version\"/\"version\": \"$new_version\"/" package.json
+    # Update the version number in the package.json file
+    sed -i "s/\"version\": \"$version\"/\"version\": \"$new_version\"/" package.json
 
-cd -
+    cd -
+fi
 
 # Copy all data from the component directory to the build directory
 cp "$COMPONENTS_DIR/$COMPONENT_NAME/"* "$BUILD_DIR/src"

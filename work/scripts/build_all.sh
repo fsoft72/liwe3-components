@@ -11,13 +11,8 @@ fi
 
 mkdir -p dist/components
 
-# Get current working directory
-CURRENT_DIR=$(pwd)
-
-DESTINATION_DIR=$CURRENT_DIR/dist/components
-
 # Cycle through all components in the components directory
 for COMPONENT_NAME in src/components/*
 do
-    ./work/scripts/build_component.sh "$COMPONENT_NAME" "$DESTINATION_DIR"
+    ./work/scripts/build_component.sh "$COMPONENT_NAME" "$1"
 done
