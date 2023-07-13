@@ -45,7 +45,9 @@
     "storybook": "^7.0.25",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6",
-    "typescript-plugin-css-modules": "^5.0.1"
+    "typescript-plugin-css-modules": "^5.0.1",
+    "@liwe/react-modal": "link:../dist/components/Modal",
+    "@liwe/react-paginator": "link:../dist/components/Paginator"
   },
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts"
