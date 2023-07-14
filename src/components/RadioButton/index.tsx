@@ -17,7 +17,7 @@ interface RadioButtonProps {
     sx?: Record<string, any>;
 
     /** optional callback to be called when radio button change status */
-    onChange?: ( radio: string ) => {}
+    onChange?: ( radio: string ) => {};
 }
 
 type RadioButtonModel = {
@@ -32,67 +32,67 @@ type RadioButtonModel = {
 
     /** Radio button value */
     value?: string;
-}
+};
 
 type RadioButtonModelInternal = RadioButtonModel & {
     prefix: string;
     index: number;
     name: string;
-    handleChange: (e:React.ChangeEvent<HTMLInputElement>) => void;
-}
+    handleChange: ( e: React.ChangeEvent<HTMLInputElement> ) => void;
+};
 
-const Rounded = (props: RadioButtonModelInternal) => {
-    const {prefix, index, name, label, value, handleChange} = props;
+const Rounded = ( props: RadioButtonModelInternal ) => {
+    const { prefix, index, name, label, value, handleChange } = props;
     return (
-        <label className="label rounded" htmlFor={`${prefix}_${index}`}>
-            <input 
+        <label className="label rounded" htmlFor={`${ prefix }_${ index }`}>
+            <input
                 className="radioInput"
                 type="radio"
                 key={index}
-                value={value} 
-                name={name} 
-                id={`${prefix}_${index}`} 
+                value={value}
+                name={name}
+                id={`${ prefix }_${ index }`}
                 onChange={handleChange}
             />
             <div className="radio-design rounded"></div>
             <div className="label-text">{label}</div>
         </label>
     );
-}
+};
 
-const Squared = (props: RadioButtonModelInternal) => {
-    const {prefix, index, name, label, value, handleChange} = props;
+const Squared = ( props: RadioButtonModelInternal ) => {
+    const { prefix, index, name, label, value, handleChange } = props;
     return (
-        <label className="label squared" htmlFor={`${prefix}_${index}`}>
-            <input 
+        <label className="label squared" htmlFor={`${ prefix }_${ index }`}>
+            <input
                 className="radio-input"
                 type="radio"
                 key={index}
-                value={value} 
-                name={name} 
-                id={`${prefix}_${index}`} 
+                value={value}
+                name={name}
+                id={`${ prefix }_${ index }`}
                 onChange={handleChange}
             />
             <div className="radio-design squared"></div>
             <div className="label-text">{label}</div>
         </label>
     );
-}
+};
 
 const RadioButton = ( props: RadioButtonProps ) => {
-    const {onChange, radios, direction} = props;
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log("=== e.target.checked", e.target.value);
-        onChange?.(e.target.value);
-    }
-    let dir:string = (!direction) ? 'radio-input-wrapper.column' : `radio-input-wrapper.${direction}`;
+    const { onChange, radios, direction = 'column' } = props;
+    const handleChange = ( e: React.ChangeEvent<HTMLInputElement> ) => {
+        console.log( "=== e.target.checked", e.target.value );
+        onChange?.( e.target.value );
+    };
+    let dir = `radio-input-wrapper ${ direction }`;
     const prefix = props.name;
 
     return (
         <div className={dir} style={props.sx}>
-           {radios.map((radio, index) => {
+            {radios.map( ( radio, index ) => {
                 return (
-                    (props.type === "squared") ?
+                    ( props.type === "squared" ) ?
                         <Squared
                             key={index}
                             index={index}
@@ -113,7 +113,7 @@ const RadioButton = ( props: RadioButtonProps ) => {
                             handleChange={handleChange}
                         />
                 );
-           })}
+            } )}
         </div>
     );
 };
