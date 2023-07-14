@@ -1,7 +1,10 @@
+@import 'colors';
 @import 'typography';
+@import 'functions/colors';
 @import 'screens';
 @import 'layout';
 @import 'mixins/layout';
+@import 'variables';
 
 html {
 	position: relative;

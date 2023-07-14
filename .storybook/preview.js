@@ -1,5 +1,4 @@
-import "../src/components/ThemeSwitcher/global.css";
-import "../src/components/ThemeSwitcher/variables.css";
+import "../src/components/ThemeSwitcher/styles.css";
 
 import "../src/components/Button/styles.css";
 import "../src/components/GrowButton/styles.css";
