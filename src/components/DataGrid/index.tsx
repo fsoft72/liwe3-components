@@ -21,26 +21,37 @@ interface Props {
     columns: Column[];
     data: any[];
     actions?: Action[];
+
+    onSearch?: ( searchTerms: { [ columnName: string ]: string; } ) => any[];
 }
 
 const ROWS_PER_PAGE = 10;
 
-const DataGrid: React.FC<Props> = ( { columns, data, actions } ) => {
+const DataGrid: React.FC<Props> = ( { columns, data, actions, onSearch } ) => {
+    const [ realData, setRealData ] = useState( data );
     const [ page, setPage ] = useState( 1 );
-    const [ searchTerm, setSearchTerm ] = useState( '' );
+    const [ searchTerms, setSearchTerms ] = useState( {} );  // searchTerms: { [columnName: string]: string }
     const [ showColumnsModal, setShowColumnsModal ] = useState( false );
     const [ visibleColumns, setVisibleColumns ] = useState( columns.map( ( column ) => column.name ) );
-    const filteredData = data.filter( ( row ) =>
-        Object.values( row ).some( ( value ) => typeof value === 'string' && value.includes( searchTerm ) )
-    );
+    const filteredData = realData.filter( ( row ) => {
+        return Object.entries( searchTerms ).every( ( [ columnName, term ] ) => {
+            return row[ columnName ].toString().toLowerCase().includes( ( term as String ).toLowerCase() );
+        } );
+    } );
     const totalPages = Math.ceil( filteredData.length / ROWS_PER_PAGE );
     const start = ( page - 1 ) * ROWS_PER_PAGE;
     const end = start + ROWS_PER_PAGE;
     const visibleData = filteredData.slice( start, end );
 
-    const doSearchTerm = ( term: string ) => {
+    const doSearchTerm = async ( column: string, term: string ) => {
+        const newSearchTerms = { ...searchTerms, [ column ]: term };
         setPage( 1 );
-        setSearchTerm( term );
+        setSearchTerms( newSearchTerms );
+
+        if ( onSearch ) {
+            const d = await onSearch?.( newSearchTerms );
+            setRealData( d ?? [] );
+        }
     };
 
     const paginatorPageChange = ( page: number ) => {
@@ -84,8 +95,8 @@ const DataGrid: React.FC<Props> = ( { columns, data, actions } ) => {
                                     <input
                                         type="text"
                                         placeholder={`Search ${ column.name }`}
-                                        value={searchTerm}
-                                        onChange={( e ) => doSearchTerm( e.target.value )}
+                                        value={searchTerms[ column.name ] ?? ''}
+                                        onChange={( e ) => doSearchTerm( column.name, e.target.value )}
                                     />
                                 </th>
                             ) : (
@@ -120,7 +131,7 @@ const DataGrid: React.FC<Props> = ( { columns, data, actions } ) => {
             </table>
             <Paginator
                 currentPage={page}
-                totalRows={data.length}
+                totalRows={totalPages}
                 rowsPerPage={ROWS_PER_PAGE}
                 onPageChange={paginatorPageChange}
             />
