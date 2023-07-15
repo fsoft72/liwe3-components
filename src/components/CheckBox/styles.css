@@ -3,7 +3,7 @@
     align-items: center;
     margin: 10px;
     font-family: Arial, sans-serif;
-    color: var(--text-color);
+    color: var(--liwe-default-color);
 }
 
 .liwe3-container input {
@@ -14,9 +14,9 @@
     width: 1.4rem;
     height: 1.4rem;
     border-radius: 50%;
-    background-color: var(--main-bg-darker);
+    background-color: var(--liwe-darker-secondary-color);
     box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset,
-                var(--bg-color) 0px 0px 0px 0px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+                var(--liwe-main-bg-color) 0px 0px 0px 0px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
     cursor: pointer;
     position: relative;
     overflow: visible;
@@ -38,7 +38,7 @@
 
 .liwe3-container input:checked + .checkmark {
     background-color: var(--liwe-primary-color);
-    box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, var(--bg-color) 0px 0px 0px 2px inset, var(--bg-color) 0px 0px 0px 24px inset,
+    box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, var(--liwe-main-bg-color) 0px 0px 0px 2px inset, var(--liwe-light-color) 0px 0px 0px 24px inset,
                 rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
 }
 
@@ -68,7 +68,7 @@
 
 .path {
     fill: none;
-    stroke: var(--text-color);
+    stroke: var(--liwe-default-color);
     stroke-width: 6;
     stroke-linecap: round;
     stroke-linejoin: round;
