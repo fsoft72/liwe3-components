@@ -28,7 +28,7 @@
 
 .label.rounded{
     border-radius: 100px;
-    background-color: var(--liwe-secondary-color);
+    background-color: transparent; 
 }
 
 .label.squared{
