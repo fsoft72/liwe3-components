@@ -46,7 +46,7 @@ export const SecondStory: Story = {
 	args: {
         radios: radiosOptions,
 		name: 'radio02',
-		type: 'squared',
+		type: 'rounded',
 		direction: 'row',
 		sx: {},
         onChange: (value:string) => { 

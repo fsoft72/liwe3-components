@@ -1,22 +1,22 @@
-.radio-input-wrapper {
+.liwe3-radio-input-wrapper {
     display: flex;
     align-items: flex-start;
     margin-bottom: 1rem;
 }
 
-.radio-input-wrapper.column {
+.liwe3-radio-input-wrapper.column {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
 }
 
-.radio-input-wrapper.row {
+.liwe3-radio-input-wrapper.row {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
 }
 
-.label {
+.liwe3-label {
     display: flex;
     position:relative;
     align-items: center;
@@ -26,24 +26,24 @@
     transition: .3s;
 }
 
-.label.rounded{
+.liwe3-label.rounded{
     border-radius: 100px;
     background-color: transparent; 
 }
 
-.label.squared{
+.liwe3-label.squared{
     border-radius: 1px;
     background-color: transparent;
 }
 
 
-.label.rounded:hover,
-.label.rounded:focus-within,
-.label.rounded:active {
+.liwe3-label.rounded:hover,
+.liwe3-label.rounded:focus-within,
+.liwe3-label.rounded:active {
     background-color: var(--liwe-primary-color); 
 }
 
-.radio-input {
+.liwe3-radio-input {
     position: absolute;
     left: 0;
     top: 0;
@@ -53,36 +53,36 @@
     z-index: -1;
 }
 
-.radio-design {
+.liwe3-radio-design {
     width: 1.1rem;
     height: 1.1rem;
     position: relative;
 }
 
-.radio-design.rounded {
+.liwe3-radio-design.rounded {
     border-radius: 100px;
     background: linear-gradient(to right bottom, var(--liwe-primary-color), var(--liwe-secondary-color));
     border: 2px solid var(--liwe-secondary-color);
 }
 
 
-.radio-input:checked ~ .radio-design.rounded {
+.liwe3-radio-input:checked ~ .liwe3-radio-design.rounded {
     background: linear-gradient(to right bottom, var(--liwe-secondary-color), var(--liwe-primary-color));
 }
 
-.radio-design.squared {
+.liwe3-radio-design.squared {
     border-radius: 1px;
     border: 2px solid var(--liwe-default-color);
     transition: .5s;
 }
 
-.radio-input:checked ~ .radio-design.squared {
+.liwe3-radio-input:checked ~ .liwe3-radio-design.squared {
     border-radius: 100px;
     background-color: var(--liwe-default-color);
     opacity: .8;
 }
 
-.radio-design::before {
+.liwe3-radio-design::before {
     content: '';
     display: inline-block;
     width: inherit;
@@ -93,18 +93,18 @@
     transition: .3s;
 }
 
-.radio-input:checked+.radio-design::before {
+.liwe3-radio-input:checked+.liwe3-radio-design::before {
     transform: scale(0);
 }
 
-.label-text {
+.liwe3-label-text {
     position:relative;
     margin-left: .7rem;
     transition: .3s;
 }
 
-.label.squared > .label-text::before,
-.label.squared > .label-text::after {
+.liwe3-label.squared > .liwe3-label-text::before,
+.liwe3-label.squared > .liwe3-label-text::after {
     content: '';
     top: 1.5em;
     left: 0;
@@ -117,20 +117,20 @@
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
 }
-.label.squared > .label-text::before {
+.liwe3-label.squared > .liwe3-label-text::before {
     left: 0;
 }
-.label.squared > .label-text::after {
+.liwe3-label.squared > .liwe3-label-text::after {
     right: 50%;
 }
-.label.squared:active > .label-text::before,
-.label.squared:active > .label-text::before,
-.label.squared:hover > .label-text::before,
-.label.squared:hover > .label-text::after {
+.liwe3-label.squared:active > .liwe3-label-text::before,
+.liwe3-label.squared:active > .liwe3-label-text::before,
+.liwe3-label.squared:hover > .liwe3-label-text::before,
+.liwe3-label.squared:hover > .liwe3-label-text::after {
     width: 100%;
 }
 
-.radio-input:checked~.label-text {
+.liwe3-radio-input:checked~.liwe3-label-text {
     color: var(--liwe-default-color); 
     font-size:1.1em;
 }

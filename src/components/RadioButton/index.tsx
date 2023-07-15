@@ -44,9 +44,9 @@ type RadioButtonModelInternal = RadioButtonModel & {
 const Rounded = ( props: RadioButtonModelInternal ) => {
     const { prefix, index, name, label, value, handleChange } = props;
     return (
-        <label className="label rounded" htmlFor={`${ prefix }_${ index }`}>
+        <label className="liwe3-label rounded" htmlFor={`${ prefix }_${ index }`}>
             <input
-                className="radio-input"
+                className="liwe3-radio-input"
                 type="radio"
                 key={index}
                 value={value}
@@ -54,8 +54,8 @@ const Rounded = ( props: RadioButtonModelInternal ) => {
                 id={`${ prefix }_${ index }`}
                 onChange={handleChange}
             />
-            <div className="radio-design rounded"></div>
-            <div className="label-text">{label}</div>
+            <div className="liwe3-radio-design rounded"></div>
+            <div className="liwe3-label-text">{label}</div>
         </label>
     );
 };
@@ -63,9 +63,9 @@ const Rounded = ( props: RadioButtonModelInternal ) => {
 const Squared = ( props: RadioButtonModelInternal ) => {
     const { prefix, index, name, label, value, handleChange } = props;
     return (
-        <label className="label squared" htmlFor={`${ prefix }_${ index }`}>
+        <label className="liwe3-label squared" htmlFor={`${ prefix }_${ index }`}>
             <input
-                className="radio-input"
+                className="liwe3-radio-input"
                 type="radio"
                 key={index}
                 value={value}
@@ -73,8 +73,8 @@ const Squared = ( props: RadioButtonModelInternal ) => {
                 id={`${ prefix }_${ index }`}
                 onChange={handleChange}
             />
-            <div className="radio-design squared"></div>
-            <div className="label-text">{label}</div>
+            <div className="liwe3-radio-design squared"></div>
+            <div className="liwe3-label-text">{label}</div>
         </label>
     );
 };
@@ -85,7 +85,7 @@ const RadioButton = ( props: RadioButtonProps ) => {
         console.log( "=== e.target.checked", e.target.value );
         onChange?.( e.target.value );
     };
-    let dir = `radio-input-wrapper ${ direction }`;
+    let dir = `liwe3-radio-input-wrapper ${ direction }`;
     const prefix = props.name;
 
     return (
