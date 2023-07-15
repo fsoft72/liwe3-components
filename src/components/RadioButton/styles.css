@@ -16,9 +16,9 @@
     justify-content: space-evenly;
 }
 
-.radio-input-wrapper .label {
+.label {
     display: flex;
-    position: relative;
+    position:relative;
     align-items: center;
     padding: .7rem .9rem;
     margin: .25rem 0;
@@ -26,24 +26,24 @@
     transition: .3s;
 }
 
-.radio-input-wrapper .label.rounded {
+.label.rounded{
     border-radius: 100px;
-    background-color: var(--liwe-primary-color);
+    background-color: var(--liwe-secondary-color);
 }
 
-.radio-input-wrapper .label.squared {
+.label.squared{
     border-radius: 1px;
     background-color: transparent;
 }
 
 
-.radio-input-wrapper .label.rounded:hover,
-.radio-input-wrapper .label.rounded:focus-within,
-.radio-input-wrapper .label.rounded:active {
-    background-color: var(--liwe-secondary-color);
+.label.rounded:hover,
+.label.rounded:focus-within,
+.label.rounded:active {
+    background-color: var(--liwe-primary-color); 
 }
 
-.radio-input-wrapper .radio-input {
+.radio-input {
     position: absolute;
     left: 0;
     top: 0;
@@ -53,31 +53,36 @@
     z-index: -1;
 }
 
-.radio-input-wrapper .radio-design {
-    width: 1.1rtem;
+.radio-design {
+    width: 1.1rem;
     height: 1.1rem;
     position: relative;
 }
 
-.radio-input-wrapper .radio-design.rounded {
+.radio-design.rounded {
     border-radius: 100px;
     background: linear-gradient(to right bottom, var(--liwe-primary-color), var(--liwe-secondary-color));
     border: 2px solid var(--liwe-secondary-color);
 }
 
-.radio-input-wrapper .radio-design.squared {
-    border-radius: 1px;
-    border: 2px solid var(--liwe-default-color);
+
+.radio-input:checked ~ .radio-design.rounded {
+    background: linear-gradient(to right bottom, var(--liwe-secondary-color), var(--liwe-primary-color));
 }
 
-.radio-input-wrapper .radioInput:checked~.radio-design.squared {
+.radio-design.squared {
+    border-radius: 1px;
+    border: 2px solid var(--liwe-default-color);
+    transition: .5s;
+}
+
+.radio-input:checked ~ .radio-design.squared {
     border-radius: 100px;
     background-color: var(--liwe-default-color);
     opacity: .8;
 }
 
-
-.radio-input-wrapper .radio-design::before {
+.radio-design::before {
     content: '';
     display: inline-block;
     width: inherit;
@@ -88,18 +93,18 @@
     transition: .3s;
 }
 
-.radio-input-wrapper .radio-input:checked+.radio-design::before {
+.radio-input:checked+.radio-design::before {
     transform: scale(0);
 }
 
-.radio-input-wrapper .label-text {
-    position: relative;
+.label-text {
+    position:relative;
     margin-left: .7rem;
     transition: .3s;
 }
 
-.radio-input-wrapper .label .squared>.label-text::before,
-.radio-input-wrapper .label .squared>.label-text::after {
+.label.squared > .label-text::before,
+.label.squared > .label-text::after {
     content: '';
     top: 1.5em;
     left: 0;
@@ -112,23 +117,20 @@
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
 }
-
-.radio-input-wrapper .label .squared>.label-text::before {
+.label.squared > .label-text::before {
     left: 0;
 }
-
-.radio-input-wrapper .label .squared>.label-text::after {
+.label.squared > .label-text::after {
     right: 50%;
 }
-
-.radio-input-wrapper .label .squared:active>.label-text::before,
-.radio-input-wrapper .label .squared:active>.label-text::before,
-.radio-input-wrapper .label .squared:hover>.label-text::before,
-.radio-input-wrapper .label .squared:hover>.label-text::after {
+.label.squared:active > .label-text::before,
+.label.squared:active > .label-text::before,
+.label.squared:hover > .label-text::before,
+.label.squared:hover > .label-text::after {
     width: 100%;
 }
 
-.radio-input-wrapper .radio-input:checked~.label-text {
-    color: var(--liwe-default-color);
-    font-size: 1.1em;
+.radio-input:checked~.label-text {
+    color: var(--liwe-default-color); 
+    font-size:1.1em;
 }

@@ -46,7 +46,7 @@ const Rounded = ( props: RadioButtonModelInternal ) => {
     return (
         <label className="label rounded" htmlFor={`${ prefix }_${ index }`}>
             <input
-                className="radioInput"
+                className="radio-input"
                 type="radio"
                 key={index}
                 value={value}
