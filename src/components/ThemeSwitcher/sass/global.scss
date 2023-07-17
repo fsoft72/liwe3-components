@@ -14,7 +14,7 @@ html {
 	font-size: var(--liwe-font-size);
 }
 
-body {
+body, .storybook-wrapper {
 	position: absolute;
 	top: 0;
 	left: 0;
