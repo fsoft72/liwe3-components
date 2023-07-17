@@ -2,9 +2,10 @@ import React from 'react';
 interface ThemeSwitcherProps {
 	lightTheme?: string,
 	darkTheme?: string,
+	checked?: boolean	
 }
 // Create a component that allows the user to switch between the light and dark theme
-export  default function ThemeSwitcher ( {lightTheme = 'liwe-light-theme', darkTheme = 'liwe-dark-theme'}: ThemeSwitcherProps) {
+export  default function ThemeSwitcher ( {lightTheme = 'liwe-light-theme', darkTheme = 'liwe-dark-theme', checked = false}: ThemeSwitcherProps) {
 	const toggleTheme = ( e: any ) => {
 		const body = document.querySelector( 'body' );
 		const classes = body?.getAttribute('class');
@@ -20,7 +21,7 @@ export  default function ThemeSwitcher ( {lightTheme = 'liwe-light-theme', darkT
 
 	return (
 		<label className="liwe3-themeswitch">
-			<input type="checkbox" onChange={toggleTheme}/>
+			<input type="checkbox" onChange={toggleTheme} checked={checked}/>
 			<span className="liwe3-themeswitch-slider"></span>
 		</label>
 	);
