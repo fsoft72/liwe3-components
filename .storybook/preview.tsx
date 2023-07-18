@@ -13,7 +13,7 @@ import "../src/components/Modal/styles.css";
 import "../src/components/RadioButton/styles.css";
 import "../src/components/CheckBox/styles.css";
 import "../src/components/ThemeSwitcher/styles.css";
-import ThemeSwitcher from "../src/components/ThemeSwitcher";
+import ThemeSwitcher from "../src/components/ThemeSwitcher/index";
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
