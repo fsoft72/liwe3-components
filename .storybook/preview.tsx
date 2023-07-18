@@ -28,7 +28,7 @@ const preview = {
     ( Story ) => (
       <>
         <div className={'storybook-top-bar'}>
-          <ThemeSwitcher /><div>&nbsp;ThemeSwitcher</div>
+          <ThemeSwitcher setDark={true}/><div>&nbsp;ThemeSwitcher</div>
         </div>
         <div>
           <Story />
