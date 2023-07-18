@@ -8,6 +8,7 @@ import "../src/components/TextInput/styles.css";
 import "../src/components/DataGrid/styles.css";
 import "../src/components/Paginator/styles.css";
 import "../src/components/Modal/styles.css";
+import "../src/components/RadioButton/styles.css";
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
