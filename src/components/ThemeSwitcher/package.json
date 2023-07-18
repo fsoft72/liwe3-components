@@ -1,7 +1,7 @@
 {
-  "name": "@liwe/react-grow-button",
-  "version": "0.0.9",
-  "description": "An animated button",
+  "name": "@liwe/react-theme-switcher",
+  "description": "The LiWE3 Theme Switcher component",
+  "version": "0.0.3",
   "author": "Fabio Rotondo",
   "license": "MIT",
   "main": "index.js",
@@ -10,7 +10,6 @@
   "private": false,
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@liwe/react-theme-switcher": "*"
+    "react-dom": "^18.2.0"
   }
 }

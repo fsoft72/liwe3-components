@@ -30,7 +30,7 @@ const ROWS_PER_PAGE = 10;
 const DataGrid: React.FC<Props> = ( { columns, data, actions, onSearch } ) => {
     const [ realData, setRealData ] = useState( data );
     const [ page, setPage ] = useState( 1 );
-    const [ searchTerms, setSearchTerms ] = useState( {} );  // searchTerms: { [columnName: string]: string }
+    const [ searchTerms, setSearchTerms ] = useState( {} as any );  // searchTerms: { [columnName: string]: string }
     const [ showColumnsModal, setShowColumnsModal ] = useState( false );
     const [ visibleColumns, setVisibleColumns ] = useState( columns.map( ( column ) => column.name ) );
     const filteredData = realData.filter( ( row ) => {

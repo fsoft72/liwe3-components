@@ -1,8 +1,8 @@
 {
-  "name": "@liwe/react-grow-button",
-  "version": "0.0.9",
-  "description": "An animated button",
-  "author": "Fabio Rotondo",
+  "name": "@liwe/react-checkbox",
+  "version": "0.0.2",
+  "description": "A checkbox component",
+  "author": "Giulio Porta",
   "license": "MIT",
   "main": "index.js",
   "module": "index.esm.js",

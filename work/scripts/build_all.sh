@@ -11,6 +11,8 @@ fi
 
 mkdir -p dist/components
 
+pnpm run css:dist
+
 # Cycle through all components in the components directory
 for COMPONENT_NAME in src/components/*
 do

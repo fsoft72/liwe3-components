@@ -1,6 +1,6 @@
 {
   "name": "@liwe/react-paginator",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "A simple paginator for React",
   "author": "Fabio Rotondo",
   "license": "MIT",
@@ -10,6 +10,7 @@
   "private": false,
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@liwe/react-theme-switcher": "*"
   }
 }
