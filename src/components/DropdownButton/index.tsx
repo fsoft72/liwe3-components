@@ -1,6 +1,5 @@
 import React, {useState, useMemo} from "react";
-/* Button component will be added to collection and it wil then imported from there */
-import Button from "./Button";
+import Button from "@liwe/react-button";
 
 export type MenuItemType = {
     action: string;
@@ -86,7 +85,7 @@ export default function DropdownButton(props: DropdownButtonProps) {
     const toggle = () => setIsOpen((prev) => !prev);
     return (
         <div className={className} {...rest}>
-            <Button label={label} onClick={toggle} extraAttrs={{'aria-expanded': isOpen ? "true" : "false"}}/>
+            <Button label={label} size={'xl'} onClick={toggle} attrs={{'aria-expanded': isOpen ? "true" : "false"}}/>
             <DropdownMenu items={items} expanded={isOpen}/>
         </div>
     );
