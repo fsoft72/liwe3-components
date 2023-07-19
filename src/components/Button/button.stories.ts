@@ -12,13 +12,7 @@ type Story = StoryObj<typeof Button>;
 
 export const FirstStory: Story = {
 	args: {
-        label: 'Click me', 
+        label: 'Generic Button', 
         onClick: () => alert( 'Button clicked' ),
-		btnStyle: 'primary',
-		btnSize: 'small',
-		extraAttrs: {
-			'data-name': 'your data',
-			'aria-label': 'your label',
-		}
 	},
 };
