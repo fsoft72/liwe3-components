@@ -18,7 +18,7 @@ pnpm build
 # Copy the package.json and styles.css from the src directory
 cp src/package.json lib/.
 if [ -e "src/styles.css" ]; then
-    cp src/styles.css lib/.
+    cp src/*.css lib/.
 fi
 if [ -e "src/credits.md" ]; then
     cp src/credits.md lib/.

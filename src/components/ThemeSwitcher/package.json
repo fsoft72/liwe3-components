@@ -1,7 +1,7 @@
 {
   "name": "@liwe/react-theme-switcher",
   "description": "The LiWE3 Theme Switcher component",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Fabio Rotondo",
   "license": "MIT",
   "main": "index.js",
