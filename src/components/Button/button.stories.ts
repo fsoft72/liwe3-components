@@ -14,11 +14,12 @@ export const FirstStory: Story = {
 	args: {
         label: 'Click me', 
         onClick: () => alert( 'Button clicked' ),
-		btnStyle: 'primary',
-		btnSize: 'small',
-		extraAttrs: {
-			'data-name': 'your data',
-			'aria-label': 'your label',
-		}
+		mode: 'primary',
+		size: 'md',
+		attrs: {
+			'data-test': 'test',
+			'rel-test': 'rel',
+		},
+		id: 'test-button',
 	},
 };

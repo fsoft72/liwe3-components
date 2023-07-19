@@ -9,20 +9,30 @@
     font-size: var(--liwe-font-size);
 }
 /* sizes */
-.liwe3-button-extra-small {
+.liwe3-button-xs {
+    font-size: .7rem;
     min-width: 4em;
 }
 
-.liwe3-button-small {   
+.liwe3-button-sm {   
+    font-size: .8rem;
     min-width: 6em;
 }
 
-.liwe3-button-medium {
+.liwe3-button-md {
     min-width: 8em;
 }
 
-.liwe3-button-large {
+.liwe3-button-lg {
     min-width: 10em;
+}
+
+.liwe3-button-xl {
+    min-width: 12em;
+}
+
+.liwe3-button-block {
+    width: 100%;
 }
 /* colors */
 .liwe3-button,

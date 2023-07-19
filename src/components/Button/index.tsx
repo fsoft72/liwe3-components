@@ -1,19 +1,19 @@
 import React from 'react';
 export interface ButtonProps extends React.ComponentPropsWithoutRef<"button">{
 	label: string;
-	btnSize?: 'extra-small' | 'small' | 'medium' | 'large';
-	btnStyle?: 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark';
-	extraAttrs?: {};
+	size?: 'xs' | 'sm' | 'md' | 'ld' | 'xl' | 'block';
+	mode?: 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark';
+	attrs?: {};
 }
 
 const Button = ( props: ButtonProps ) => {
-	const { label, btnSize, btnStyle, extraAttrs, onClick, ...rest } = props;	
+	const { label, size, mode, attrs, onClick, ...rest } = props;	
 	const prepCssClasses = () => {
-		return `liwe3-button ${(btnSize ? 'liwe3-button-' + btnSize : '')} ${(btnStyle ? 'liwe3-button-' + btnStyle : '')}`;
+		return `liwe3-button ${(size ? 'liwe3-button-' + size : '')} ${(mode ? 'liwe3-button-' + mode : '')}`;
 	};
 
 	return (
-		<button onClick={onClick} className={prepCssClasses()} {...extraAttrs} {...rest}>{label}</button>
+		<button onClick={onClick} className={prepCssClasses()} {...attrs} {...rest}>{label}</button>
 	);
 };
 
