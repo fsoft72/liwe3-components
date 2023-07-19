@@ -1,5 +1,5 @@
 import React from 'react';
-export interface ButtonProps {
+export interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
 	label: string;
 	size?: 'xs' | 'sm' | 'md' | 'ld' | 'xl' | 'block';
 	mode?: 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark';
