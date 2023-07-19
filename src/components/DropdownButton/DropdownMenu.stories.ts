@@ -14,12 +14,14 @@ const items = [
     {label: 'Item 1', action: 'item1', target:'_self'} as MenuItemType,
     {label: 'Item 2', action: 'item2', target:'_self'} as MenuItemType,
     {label: 'Item 3', action: 'item3', target:'_self'} as MenuItemType,
-    {label: 'Item 4', action: 'item4', target:'_self'} as MenuItemType,
+    {label: 'Item 4', action: 'item4', target:'_self', className:"test", rel:"rel-item-4", id:"last-item"} as MenuItemType,
 ];
 
 export const FirstStory: Story = {
 	args: {
         label: 'DropdownButton',
         items: items,
+        rel: 'rel-dropdown',
+        id:"dropdown-button-id",
 	},
 };
