@@ -8,8 +8,103 @@
     min-width: 8em;
     font-size: var(--liwe-font-size);
 }
+/* sizes */
+.liwe3-button-extra-small {
+    min-width: 4em;
+}
 
-.liwe3-button:hover {
-    background-color: var(--liwe-lighter-primary-color);
+.liwe3-button-small {   
+    min-width: 6em;
+}
+
+.liwe3-button-medium {
+    min-width: 8em;
+}
+
+.liwe3-button-large {
+    min-width: 10em;
+}
+/* colors */
+.liwe3-button,
+.liwe3-button .liwe3-button-primary {
+    background-color: var(--liwe-primary-color);
     color: var(--liwe-default-color);
+}
+
+.liwe3-button:hover,
+.liwe3-button .liwe3-button-primary:hover {
+    filter: brightness(1.3);
+}
+
+.liwe3-button .liwe3-button-secondary {
+    background-color: var(--liwe-secondary-color);
+    color: var(--liwe-default-color);
+}
+
+.liwe3-button .liwe3-button-secondary:hover {
+    background-color: var(--liwe-lighter-secondary-color);
+    color: var(--liwe-default-color);
+} 
+
+.liwe3-button .liwe3-button-success {
+    background-color: var(--liwe-success-color);
+    color: var(--liwe-secondary-color);
+}
+
+.liwe3-button .liwe3-button-success:hover {
+    background-color: var(--liwe-success-color);
+    color: var(--liwe-secondary-color);
+    filter: brightness(1.3);
+} 
+
+.liwe3-button .liwe3-button-danger {
+    background-color: var(--liwe-danger-color);
+    color: var(--liwe-default-color);
+}
+
+.liwe3-button .liwe3-button-danger:hover {
+    background-color: var(--liwe-danger-color);
+    filter: brightness(1.3);
+}
+
+.liwe3-button .liwe3-button-warning {
+    background-color: var(--liwe-warning-color);
+    color: var(--liwe-default-color);
+}
+
+.liwe3-button .liwe3-button-warning:hover {
+    background-color: var(--liwe-warning-color);
+    filter: brightness(1.3);
+}
+
+.liwe3-button .liwe3-button-info {
+    background-color: var(--liwe-info-color);
+    color: var(--liwe-default-color);
+}
+
+.liwe3-button .liwe3-button-info:hover {
+    background-color: var(--liwe-info-color);
+    filter: brightness(1.3);
+}
+
+.liwe3-button .liwe3-button-light {
+    background-color: var(--liwe-light-color);
+    color: var(--liwe-dark-color);
+}
+
+.liwe3-button .liwe3-button-light:hover {
+    background-color: var(--liwe-light-color);
+    color: var(--liwe-dark-color);
+    filter: brightness(0.7);
+}
+
+
+.liwe3-button .liwe3-button-dark {
+    background-color: var(--liwe-dark-color);
+    color: var(--liwe-default-color);
+}
+
+.liwe3-button .liwe3-button-dark:hover {
+    background-color: var(--liwe-dark-color);
+    filter: brightness(1.3);
 }
