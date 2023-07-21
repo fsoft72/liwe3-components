@@ -36,85 +36,85 @@
 }
 /* colors */
 .liwe3-button,
-.liwe3-button .liwe3-button-primary {
+.liwe3-button.liwe3-button-primary {
     background-color: var(--liwe-primary-color);
     color: var(--liwe-default-color);
 }
 
 .liwe3-button:hover,
-.liwe3-button .liwe3-button-primary:hover {
+.liwe3-button.liwe3-button-primary:hover {
     filter: brightness(1.3);
 }
 
-.liwe3-button .liwe3-button-secondary {
+.liwe3-button.liwe3-button-secondary {
     background-color: var(--liwe-secondary-color);
     color: var(--liwe-default-color);
 }
 
-.liwe3-button .liwe3-button-secondary:hover {
+.liwe3-button.liwe3-button-secondary:hover {
     background-color: var(--liwe-lighter-secondary-color);
     color: var(--liwe-default-color);
 } 
 
-.liwe3-button .liwe3-button-success {
+.liwe3-button.liwe3-button-success {
     background-color: var(--liwe-success-color);
     color: var(--liwe-secondary-color);
 }
 
-.liwe3-button .liwe3-button-success:hover {
+.liwe3-button.liwe3-button-success:hover {
     background-color: var(--liwe-success-color);
     color: var(--liwe-secondary-color);
     filter: brightness(1.3);
 } 
 
-.liwe3-button .liwe3-button-danger {
+.liwe3-button.liwe3-button-danger {
     background-color: var(--liwe-danger-color);
     color: var(--liwe-default-color);
 }
 
-.liwe3-button .liwe3-button-danger:hover {
+.liwe3-button.liwe3-button-danger:hover {
     background-color: var(--liwe-danger-color);
     filter: brightness(1.3);
 }
 
-.liwe3-button .liwe3-button-warning {
+.liwe3-button.liwe3-button-warning {
     background-color: var(--liwe-warning-color);
     color: var(--liwe-default-color);
 }
 
-.liwe3-button .liwe3-button-warning:hover {
+.liwe3-button.liwe3-button-warning:hover {
     background-color: var(--liwe-warning-color);
     filter: brightness(1.3);
 }
 
-.liwe3-button .liwe3-button-info {
+.liwe3-button.liwe3-button-info {
     background-color: var(--liwe-info-color);
     color: var(--liwe-default-color);
 }
 
-.liwe3-button .liwe3-button-info:hover {
+.liwe3-button.liwe3-button-info:hover {
     background-color: var(--liwe-info-color);
     filter: brightness(1.3);
 }
 
-.liwe3-button .liwe3-button-light {
+.liwe3-button.liwe3-button-light {
     background-color: var(--liwe-light-color);
     color: var(--liwe-dark-color);
 }
 
-.liwe3-button .liwe3-button-light:hover {
+.liwe3-button.liwe3-button-light:hover {
     background-color: var(--liwe-light-color);
     color: var(--liwe-dark-color);
     filter: brightness(0.7);
 }
 
 
-.liwe3-button .liwe3-button-dark {
+.liwe3-button.liwe3-button-dark {
     background-color: var(--liwe-dark-color);
     color: var(--liwe-default-color);
 }
 
-.liwe3-button .liwe3-button-dark:hover {
+.liwe3-button.liwe3-button-dark:hover {
     background-color: var(--liwe-dark-color);
     filter: brightness(1.3);
 }
