@@ -1,14 +1,18 @@
-.liwe3-select-option {
+.liwe3-select-container .liwe3-select-option {
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   text-align: center;
 }
-.liwe3-select-container > .liwe3-select-button > .liwe3-button{
+
+.liwe3-select-container > .liwe3-select-button > .liwe3-button {
     min-height: 2rem;
     width: 100%;
-    border: none;
-    border-radius: 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--liwe-default-color);
+    border-radius: var(--liwe-border-radius);
+    background-color: var(--liwe-lighter-secondary-color);
+    color: var(--liwe-default-color);
 }
 
 .liwe3-select-container > .liwe3-dropdown-button > .liwe3-dropdown-menu {

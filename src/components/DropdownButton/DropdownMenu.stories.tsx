@@ -5,6 +5,7 @@ import DropdownButton, {MenuItemType} from './index';
 //👇 This default export determines where your story goes in the story list
 const meta: Meta<typeof DropdownButton> = {
 	component: DropdownButton,
+    tags: ['autodocs'],
 };
 
 export default meta;
