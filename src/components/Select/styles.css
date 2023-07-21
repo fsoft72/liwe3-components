@@ -1,0 +1,28 @@
+.liwe3-select-option {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  text-align: center;
+}
+.liwe3-select-container > .liwe3-select-button > .liwe3-button{
+    min-height: 2rem;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+.liwe3-select-container > .liwe3-dropdown-button > .liwe3-dropdown-menu {
+    background-color: var(--liwe-lighter-secondary-color);
+    color: var(--liwe-default-color);
+    border-radius: 0 0 var(--liwe-border-radius) var(--liwe-border-radius);
+}
+
+.liwe3-select-container > .liwe3-dropdown-button > ul > li {
+    display: block;
+    color: var(--liwe-default-color);
+    transition: all 0.5s ease;
+}
+
+.liwe3-select-container > .liwe3-dropdown-button > ul > li:hover {
+    background-color: var(--liwe-secondary-color);
+}

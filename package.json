@@ -18,11 +18,12 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@liwe/react-button": "link:./dist/components/Button",
-    "@liwe/react-modal": "link:./dist/components/Modal",
-    "@liwe/react-paginator": "link:./dist/components/Paginator",
-    "@liwe/react-power-switch": "link:./dist/components/PowerSwitch",
-    "@liwe/react-text-input": "link:./dist/components/TextInput",
+    "@liwe/react-button": "link:dist/components/Button",
+    "@liwe/react-dropdown-button": "link:dist/components/DropdownButton",
+    "@liwe/react-modal": "link:dist/components/Modal",
+    "@liwe/react-paginator": "link:dist/components/Paginator",
+    "@liwe/react-power-switch": "link:dist/components/PowerSwitch",
+    "@liwe/react-text-input": "link:dist/components/TextInput",
     "@storybook/addon-essentials": "^7.0.26",
     "@storybook/addon-interactions": "^7.0.26",
     "@storybook/addon-links": "^7.0.26",

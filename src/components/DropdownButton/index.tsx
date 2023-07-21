@@ -1,28 +1,38 @@
-import React, {useState, useMemo} from "react";
+import React, {useState} from "react";
 import Button from "@liwe/react-button";
 
 export type MenuItemType = {
-    action: string;
     label: string;
+    val?: string | number;
     target?: "_blank" | "_self" | "_parent" | "_top" | "";
 };
 
-interface DropdownButtonProps extends React.ComponentPropsWithoutRef<"div"> {
+export interface DropdownButtonProps extends React.ComponentPropsWithoutRef<"div"> {
     label: string;
     items: MenuItemType[];
-    itemTemplate?: React.ReactElement;
+    itemTemplate?: React.FC<MenuItemProps>;
+};
+
+interface PrivateDropdownButtonProps extends DropdownButtonProps {
+    size?: 'xs' | 'sm' | 'md' | 'ld' | 'xl' | 'block';
+    mode?: 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark';  
 };
 
 interface DropdownMenuProps {
     items: DropdownButtonProps["items"];
     expanded: boolean;
-    singleElement?: React.ReactElement;
+    singleElement?: React.FC<MenuItemProps>;
 };
 
-interface MenuItemProps extends MenuItemType, React.ComponentPropsWithoutRef<"li"> {
+export interface MenuItemProps extends MenuItemType, React.ComponentPropsWithoutRef<"li"> {
     key: number;
-    singleElement?: React.ReactElement;
+    singleElement?: React.FC<MenuItemProps>;
 }
+
+const defaultValuesMenuItem: MenuItemType = {
+    label: '',
+    val: '#',
+};
 
 /**
  * MenuItem component
@@ -33,16 +43,25 @@ interface MenuItemProps extends MenuItemType, React.ComponentPropsWithoutRef<"li
  * It will accepts all the props that can be passed to a li element.
  * 
  * @param props : MenuItemProps
- * @returns React.ReactElement
+ * @returns React.ReactNode
  */
 const MenuItem = ( props: MenuItemProps)  => {
-    const { action, label, target, key, singleElement, ...rest } = props;
-    const Template = singleElement ? singleElement : <a href={action} target={target}>{label}</a>;
+    const defaultValues = {...defaultValuesMenuItem, ...props};
+    const { label, val, target, key, ...rest } = defaultValues;
+    const url = val?.toString();
+    if(props.singleElement) 
+        return <props.singleElement 
+            label={label} 
+            val={val} 
+            target={target} 
+            key={key} 
+            {...rest} 
+        />
     return (
         <li key={key} {...rest}>
-            {Template}
+            <a href={url} target={target}>{label}</a>
         </li>
-    )
+    );
 }
 
 /**
@@ -53,7 +72,7 @@ const MenuItem = ( props: MenuItemProps)  => {
  * If no singleElement is passed, the default template will be used.
  * 
  * @param props : DropdownMenuProps
- * @returns React.ReactElement
+ * @returns React.ReactNode
  */
 const DropdownMenu = (props:DropdownMenuProps) => {
     return (
@@ -74,10 +93,10 @@ const DropdownMenu = (props:DropdownMenuProps) => {
  * It will accepts all the props that can be passed to a div element.
  * 
  * @param props : DropdownButtonProps
- * @returns React.ReactElement
+ * @returns React.ReactNode
  */
-export default function DropdownButton(props: DropdownButtonProps) {
-    const { label, items, itemTemplate, ...rest } = props;
+export default function DropdownButton(props: PrivateDropdownButtonProps) {
+    const { label, items, itemTemplate, size, mode, ...rest } = props;
     // if a class name is passed, it will be added to the default class name
     const className = `liwe3-dropdown-button ${rest.className || ""}`;
     delete rest?.className;
@@ -85,8 +104,11 @@ export default function DropdownButton(props: DropdownButtonProps) {
     const toggle = () => setIsOpen((prev) => !prev);
     return (
         <div className={className} {...rest}>
-            <Button label={label} size={'xl'} onClick={toggle} attrs={{'aria-expanded': isOpen ? "true" : "false"}}/>
-            <DropdownMenu items={items} expanded={isOpen}/>
+            <Button label={label} size={size} mode={mode} onClick={toggle} attrs={{'aria-expanded': isOpen ? "true" : "false"}}/>
+            <DropdownMenu 
+                items={items} 
+                singleElement={itemTemplate} 
+                expanded={isOpen}/>
         </div>
     );
 };
