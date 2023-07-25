@@ -21,7 +21,6 @@ export default function ThemeSwitcher ( { lightTheme = 'liwe3-light-theme', dark
 	}, [] );
 
 	const toggleTheme = ( e: any ) => {
-		console.log( e.target.checked );
 		const body = document.querySelector( 'body' );
 		const classes = body?.getAttribute( 'class' );
 		let newClasses = '';
