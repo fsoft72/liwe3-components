@@ -5,7 +5,7 @@ interface ThemeSwitcherProps {
 	darkTheme?: string,
 }
 // Create a component that allows the user to switch between the light and dark theme
-export default function ThemeSwitcher ( { lightTheme = 'liwe-light-theme', darkTheme = 'liwe-dark-theme' }: ThemeSwitcherProps ) {
+export default function ThemeSwitcher ( { lightTheme = 'liwe3-light-theme', darkTheme = 'liwe3-dark-theme' }: ThemeSwitcherProps ) {
 	const [ isDark, setIsDark ] = useState( false );
 
 	useEffect( () => {
