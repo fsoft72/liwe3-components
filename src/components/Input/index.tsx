@@ -20,6 +20,16 @@ const sizeMap = {
     block: 'liwe3-col12',
 };
 
+/**
+ * Input component
+ * This is a basic input component adding some feauters to the deafult one. 
+ * This component has styling and sizing options based on the main and internal css files (liwe3-styles.css / liwe3-styles.min.css / styles.css) 
+ * and a basic status managment.
+ * 
+ * @param props: InputProps
+ * @param ref: React.Ref<HTMLInputElement>
+ * @returns React.FC
+ */
 const Input = forwardRef(( props: InputProps, ref: React.Ref<HTMLInputElement>) => {
 	const { label, size, mode, status, message, attrs, ...rest } = props;	
 	const prepCssClasses = () => {
