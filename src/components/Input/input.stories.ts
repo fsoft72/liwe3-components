@@ -17,6 +17,7 @@ export const Defualt: Story = {
 			'rel-test': 'rel',
 		},
 		id: 'test-input',
+		size: 'md',
 	},
 };
 export const Warning: Story = {
@@ -29,6 +30,7 @@ export const Warning: Story = {
 			'rel-test': 'rel',
 		},
 		id: 'test-input',
+		size: 'sm',
 	},
 };
 export const Error: Story = {
@@ -41,6 +43,7 @@ export const Error: Story = {
 			'rel-test': 'rel',
 		},
 		id: 'test-input',
+		size: 'lg',
 	},
 };
 export const Success: Story = {
@@ -53,5 +56,6 @@ export const Success: Story = {
 			'rel-test': 'rel',
 		},
 		id: 'test-input',
+		size: 'block',
 	},
 };
