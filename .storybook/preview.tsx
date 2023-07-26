@@ -3,6 +3,7 @@ import React, {ReactNode} from "react";
 import "../src/components/ThemeSwitcher/liwe3-styles.css";
 
 import "../src/components/Button/styles.css";
+import "../src/components/Input/styles.css";
 import "../src/components/DropdownButton/styles.css";
 import "../src/components/GrowButton/styles.css";
 import "../src/components/PowerSwitch/styles.css";
