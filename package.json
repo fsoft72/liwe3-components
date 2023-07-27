@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@liwe/react-button": "link:./dist/components/Button",
+    "@liwe/react-input": "link:dist/components/Input",
     "@liwe/react-modal": "link:./dist/components/Modal",
     "@liwe/react-paginator": "link:./dist/components/Paginator",
     "@liwe/react-power-switch": "link:./dist/components/PowerSwitch",
