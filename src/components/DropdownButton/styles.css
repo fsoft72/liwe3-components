@@ -11,7 +11,7 @@
     border-radius: var(--liwe-border-radius);
     border: 1px solid var(--liwe-darker-primary-color);
     overflow: hidden;
-    height: fit-content;
+    height: max-content;
     transform-origin: top;
     transform: scaleY(0);
     transition: all .3s ease;
