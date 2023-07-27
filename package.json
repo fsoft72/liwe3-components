@@ -1,16 +1,40 @@
 {
-  "name": "@liwe/select",
-  "version": "0.0.1",
-  "description": "A LiWE3 Select component",
-  "author": "Giulio Porta",
-  "license": "MIT",
+  "name": "liwe3-components",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "module": "index.esm.js",
-  "types": "index.d.ts",
-  "private": false,
-  "peerDependencies": {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "css:dist": "node-sass src/components/ThemeSwitcher/sass/global.scss src/components/ThemeSwitcher/liwe3-styles.min.css --output-style compressed",
+    "css:dev": "node-sass src/components/ThemeSwitcher/sass/global.scss src/components/ThemeSwitcher/liwe3-styles.css "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@liwe/react-dropdown-button": "^0.0.1"
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@liwe/react-button": "link:dist/components/Button",
+    "@liwe/react-dropdown-button": "link:dist/components/DropdownButton",
+    "@liwe/react-modal": "link:dist/components/Modal",
+    "@liwe/react-paginator": "link:dist/components/Paginator",
+    "@liwe/react-power-switch": "link:dist/components/PowerSwitch",
+    "@liwe/react-text-input": "link:dist/components/TextInput",
+    "@storybook/addon-essentials": "^7.0.26",
+    "@storybook/addon-interactions": "^7.0.26",
+    "@storybook/addon-links": "^7.0.26",
+    "@storybook/blocks": "^7.0.26",
+    "@storybook/react": "^7.0.26",
+    "@storybook/react-vite": "^7.0.26",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "node-sass": "^9.0.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.0.26"
   }
 }
