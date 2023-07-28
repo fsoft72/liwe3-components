@@ -14,5 +14,12 @@ export const FirstStory: Story = {
 	args: {
         label: 'Generic Button', 
         onClick: () => alert( 'Button clicked' ),
+		mode: 'primary',
+		size: 'md',
+		attrs: {
+			'data-test': 'test',
+			'rel-test': 'rel',
+		},
+		id: 'test-button',
 	},
 };

@@ -1,12 +1,19 @@
 import React from 'react';
-export interface ButtonProps {
+export interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
 	label: string;
-	onClick?: () => void;
+	size?: 'xs' | 'sm' | 'md' | 'ld' | 'xl' | 'block';
+	mode?: 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark';
+	attrs?: {};
 }
 
-const Button = ( { label, onClick }: ButtonProps ) => {
+const Button = ( props: ButtonProps ) => {
+	const { label, size, mode, attrs, onClick, ...rest } = props;	
+	const prepCssClasses = () => {
+		return `liwe3-button ${(size ? 'liwe3-button-' + size : '')} ${(mode ? 'liwe3-button-' + mode : '')}`;
+	};
+
 	return (
-		<button onClick={onClick} className="liwe3-button">{label}</button>
+		<button onClick={onClick} className={prepCssClasses()} {...attrs} {...rest}>{label}</button>
 	);
 };
 

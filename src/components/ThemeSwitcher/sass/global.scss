@@ -195,7 +195,7 @@ button:hover {
     color: var(--liwe-default-color);
 }
 
-.liwe-lead{
+.liwe3-lead{
 	font-size: 1.25rem;
 	font-weight: calc((var(--liwe-font-weight) /2) * 2.5);
 	line-height: $liweDefaultLineHeight;
@@ -206,316 +206,437 @@ button:hover {
 /* LAYOUT */
 
 /* flex */
-.liwe-container {
+.liwe3-container-fluid {
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-.liwe-flex-start {
+.liwe3-container {
+  width: $liweXxl;
+}
+
+.liwe3-flex-start {
   justify-content: liwe-flex-start !important;
 }
 
-.liwe-flex-end {
+.liwe3-flex-end {
   justify-content: liwe-flex-end !important;
 }
 
-.liwe-flex-center {
+.liwe3-flex-center {
   justify-content: center !important;
 }
 
-.liwe-flex-between {
+.liwe3-flex-between {
   justify-content: space-between !important;
 }
 
-.liwe-flex-around {
+.liwe3-flex-around {
   justify-content: space-around !important;
 }
 
-.liwe-flex-evenly {
+.liwe3-flex-evenly {
   justify-content: space-evenly !important;
 }
 
-.liwe-flex-top {
+.liwe3-flex-top {
   align-items: liwe-flex-start !important;
 }
 
-.liwe-flex-bottom {
+.liwe3-flex-bottom {
   align-items: liwe-flex-end !important;
 }
 
-.liwe-flex-middle {
+.liwe3-flex-middle {
   align-items: center !important;
 }
 
-.liwe-flex-stretch {
+.liwe3-flex-stretch {
   align-items: stretch !important;
 }
 
-.liwe-flex-baseline {
+.liwe3-flex-baseline {
   align-items: baseline !important;
 }
 
-.liwe-row {
+.liwe3-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-left: -#{($liweGuttersX)};
 }
 
-.liwe-col {
+.liwe3-col {
   position: relative;
   width: 100%;
 }
 
-.liwe-col1 {
+.liwe3-col1 {
 	@include liweCol(1, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col2 {
+.liwe3-col2 {
 	@include liweCol(2, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col3 {
+.liwe3-col3 {
 	@include liweCol(3, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col4 {
+.liwe3-col4 {
 	@include liweCol(4, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col5 {
+.liwe3-col5 {
 	@include liweCol(5, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col6 {
+.liwe3-col6 {
 	@include liweCol(6, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col7 {
+.liwe3-col7 {
 	@include liweCol(7, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col8 {
+.liwe3-col8 {
 	@include liweCol(8, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col9 {
+.liwe3-col9 {
 	@include liweCol(9, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col10 {
+.liwe3-col10 {
 	@include liweCol(10, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col11 {
+.liwe3-col11 {
 	@include liweCol(11, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col12 {
+.liwe3-col12 {
 	@include liweCol(12, $liweGuttersX, $liweGuttersY);
 }
 
-.liwe-col-offset1 {
+.liwe3-col-offset1 {
   margin-left: 8.333333%;
 }
 
-.liwe-col-offset2 {
+.liwe3-col-offset2 {
   margin-left: 16.666667%;
 }
 
-.liwe-col-offset3 {
+.liwe3-col-offset3 {
   margin-left: 25%;
 }
 
-.liwe-col-offset4 {
+.liwe3-col-offset4 {
   margin-left: 33.333333%;
 }
 
-.liwe-col-offset5 {
+.liwe3-col-offset5 {
   margin-left: 41.666667%;
 }
 
-.liwe-col-offset6 {
+.liwe3-col-offset6 {
   margin-left: 50%;
 }
 
-.liwe-col-offset7 {
+.liwe3-col-offset7 {
   margin-left: 58.333333%;
 }
 
-.liwe-col-offset8 {
+.liwe3-col-offset8 {
   margin-left: 66.666667%;
 }
 
-.liwe-col-offset9 {
+.liwe3-col-offset9 {
   margin-left: 75%;
 }
 
-.liwe-col-offset10 {
+.liwe3-col-offset10 {
   margin-left: 83.333333%;
 }
 
-.liwe-col-offset11 {
+.liwe3-col-offset11 {
   margin-left: 91.666667%;
 }
 
 /* colors */
 
-.liwe-bg-main {
-  background-color: var(--liwe-main-bg-color);
+.liwe3-bg-main {
+  background-color: var(--liwe-main-bg-color) !important;
 }
 
-.liwe-bg-primary {
-  background-color: var(--liwe-primary-color);
+.liwe3-bg-primary {
+  background-color: var(--liwe-primary-color) !important;
 }
 
-.liwe-bg-primary-dark {
-  background-color: var(--liwe-darker-primary-color);
+.liwe3-bg-primary-dark {
+  background-color: var(--liwe-darker-primary-color) !important;
 }
 
-.liwe-bg-primary-light {
-  background-color: var(--liwe-lighter-primary-color);
+.liwe3-bg-primary-light {
+  background-color: var(--liwe-lighter-primary-color) !important;
 }
 
-.liwe-bg-primary-comp {
-  background-color: var(--liwe-comp-primary-color);
+.liwe3-bg-primary-comp {
+  background-color: var(--liwe-comp-primary-color) !important;
 }
 
-.liwe-bg-secondary {
-  background-color: var(--liwe-secondary-color);
+.liwe3-bg-secondary {
+  background-color: var(--liwe-secondary-color) !important;
 }
 
-.liwe-bg-secondary-dark {
-  background-color: var(--liwe-darker-secondary-color);
+.liwe3-bg-secondary-dark {
+  background-color: var(--liwe-darker-secondary-color) !important;
 }
 
-.liwe-bg-secondary-light {
-  background-color: var(--liwe-lighter-secondary-color);
+.liwe3-bg-secondary-light {
+  background-color: var(--liwe-lighter-secondary-color) !important;
 }
 
-.liwe-bg-secondary-comp {
-  background-color: var(--liwe-comp-secondary-color);
+.liwe3-bg-secondary-comp {
+  background-color: var(--liwe-comp-secondary-color) !important;
 }
 
-.liwe-bg-light {
-  background-color: var(--liwe-lighter-secondary-color);
+.liwe3-bg-light {
+  background-color: var(--liwe-lighter-secondary-color) !important;
 }
-.liwe-bg-success {
-  background-color: var(--liwe-success-color);
-}
-
-.liwe-bg-danger {
-  background-color: var(--liwe-danger-color);
+.liwe3-bg-success {
+  background-color: var(--liwe-success-color) !important;
 }
 
-.liwe-bg-warning {
-  background-color: var(--liwe-warning-color);
+.liwe3-bg-danger {
+  background-color: var(--liwe-danger-color) !important;
 }
 
-.liwe-bg-info {
-  background-color: var(--liwe-info-color);
+.liwe3-bg-warning {
+  background-color: var(--liwe-warning-color) !important;
 }
 
-.liwe-bg-light {
-  background-color: var(--liwe-light-color);
+.liwe3-bg-info {
+  background-color: var(--liwe-info-color) !important;
 }
 
-.liwe-bg-dark {
-  background-color: var(--liwe-dark-color);
+.liwe3-bg-light {
+  background-color: var(--liwe-light-color) !important;
 }
 
-.liwe-txt-primary {
-  color: var(--liwe-primary-color);
+.liwe3-bg-dark {
+  background-color: var(--liwe-dark-color) !important;
 }
 
-.liwe-txt-primary-dark {
-  color: var(--liwe-darker-primary-color);
+.liwe3-txt-primary {
+  color: var(--liwe-primary-color) !important;
 }
 
-.liwe-txt-primary-light {
-  color: var(--liwe-lighter-primary-color);
+.liwe3-txt-primary-dark {
+  color: var(--liwe-darker-primary-color) !important;
 }
 
-.liwe-txt-primary-comp {
-  color: var(--liwe-comp-primary-color);
+.liwe3-txt-primary-light {
+  color: var(--liwe-lighter-primary-color) !important;
 }
 
-.liwe-txt-secondary {
-  color: var(--liwe-secondary-color);
+.liwe3-txt-primary-comp {
+  color: var(--liwe-comp-primary-color) !important;
 }
 
-.liwe-txt-secondary-dark {
-  color: var(--liwe-darker-secondary-color);
+.liwe3-txt-secondary {
+  color: var(--liwe-secondary-color) !important;
 }
 
-.liwe-txt-secondary-light {
-  color: var(--liwe-lighter-secondary-color);
+.liwe3-txt-secondary-dark {
+  color: var(--liwe-darker-secondary-color) !important;
 }
 
-.liwe-txt-secondary-comp {
-  color: var(--liwe-comp-secondary-color);
+.liwe3-txt-secondary-light {
+  color: var(--liwe-lighter-secondary-color) !important;
 }
 
-.liwe-txt-light {
-  color: var(--liwe-light-color);
-
-}
-.liwe-txt-dark {
-  color: var(--liwe-dark-color);
+.liwe3-txt-secondary-comp {
+  color: var(--liwe-comp-secondary-color) !important;
 }
 
-.liwe-txt-success {
-  color: var(--liwe-success-color);
+.liwe3-txt-light {
+  color: var(--liwe-light-color) !important;
+
+}
+.liwe3-txt-dark {
+  color: var(--liwe-dark-color) !important;
 }
 
-.liwe-txt-danger {
-  color: var(--liwe-danger-color);
+.liwe3-txt-success {
+  color: var(--liwe-success-color) !important;
 }
 
-.liwe-txt-warning {
-  color: var(--liwe-warning-color);
+.liwe3-txt-error,
+.liwe3-txt-danger {
+  color: var(--liwe-danger-color) !important;
 }
 
-.liwe-txt-info {
-  color: var(--liwe-info-color);
+.liwe3-txt-warning {
+  color: var(--liwe-warning-color) !important;
+}
+
+.liwe3-txt-info {
+  color: var(--liwe-info-color) !important;
 }
 
 @media (max-width: #{$liweXs}) {
-  .liwe-container {
+  .liwe3-container {
     max-width: calc(#{$liweXs} - 1rem);
   }
 }
 
 @media (min-width: #{$liweSm}) {
-  .liwe-container {
+  .liwe3-container {
     max-width: calc(#{$liweSm} - 2rem);
   }
 }
 
 @media (min-width: #{$liweMd}) {
-  .liwe-container {
+  .liwe3-container {
     max-width: calc(#{$liweMd} - 3rem);
   }
 }
 
 @media (min-width: #{$liweLg}) {
-  .liwe-container {
+  .liwe3-container {
     max-width: calc(#{$liweLg} - 3rem);
   }
 }
 
 @media (min-width: #{$liweXl}) {
-  .liwe-container {
+  .liwe3-container {
     max-width: calc(#{$liweXl} - 3rem);
   }
 }
 
 @media (min-width: #{$liweXxl}) {
-  .liwe-container {
+  .liwe3-container {
     max-width: calc(#{$liweXxl} - 3rem);
   }
 }
+
+/* FORMS ELEMENTS */
+
+.liwe3-form-container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.liwe3-form-hint {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: var(--liwe-font-weight);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+  color: var(--liwe-light-color);
+}
+
+.liwe3-form-hint.show {
+  display: block;
+}
+
+.liwe3-select-container .liwe3-select-button, 
+.liwe3-form-textarea,
+.liwe3-form-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--liwe-default-color);
+  border-radius: var(--liwe-border-radius);
+  background-color: var(--liwe-lighter-secondary-color);
+  color: var(--liwe-default-color);
+  font-size: var(--liwe-font-size);
+  font-weight: var(--liwe-font-weight);
+  line-height: $liweDefaultLineHeight;
+  letter-spacing: 0;
+  text-align: $liweDefaultTextAlign;
+  margin: .3rem 0;
+
+  &::placeholder {
+    color: var(--liwe-light-color);
+  }
+}
+
+.liwe3-form-textarea:focus,
+.liwe3-form-input:focus {
+  outline: none;
+  border: 1px solid var(--liwe-primary-color);
+}
+
+.liwe3-form-textarea.error,
+.liwe3-form-input.error {
+  border: 1px solid var(--liwe-danger-color);
+}
+
+.liwe3-form-textarea.error:focus,
+.liwe3-form-input.error:focus {
+  outline: none;
+  border: 1px solid var(--liwe-danger-color);
+}
+
+.liwe3-form-textarea.success,
+.liwe3-form-input.success {
+  border: 1px solid var(--liwe-success-color);
+}
+
+.liwe3-form-textarea.success:focus,
+.liwe3-form-input.success:focus {
+  outline: none;
+  border: 1px solid var(--liwe-success-color);
+}
+
+.liwe3-form-textarea.warning,
+.liwe3-form-input.warning {
+  border: 1px solid var(--liwe-warning-color);
+}
+
+.liwe3-form-textarea.warning:focus,
+.liwe3-form-input.warning:focus {
+  outline: none;
+  border: 1px solid var(--liwe-warning-color);
+}
+
+.liwe3-form-textarea.info,
+.liwe3-form-input.info {
+  border: 1px solid var(--liwe-info-color);
+}
+
+.liwe3-form-textarea.info:focus,
+.liwe3-form-input.info:focus {
+  outline: none;
+  border: 1px solid var(--liwe-info-color);
+}
+
+.liwe3-form-textarea.disabled,
+.liwe3-form-textarea:disabled,
+.liwe3-form-input:disabled,
+.liwe3-form-input.disabled {
+  border: 1px solid var(--liwe-light-color);
+  background-color: var(--liwe-light-color);
+  color: var(--liwe-default-color);
+}
+
+.liwe3-form-textarea.disabled:focus,
+.liwe3-form-input.disabled:focus {
+  outline: none;
+  border: 1px solid var(--liwe-light-color);
+}
+
+.liwe3-form-textarea.disabled::placeholder,
+.liwe3-form-textarea:disabled::placeholder,
+.liwe3-form-input:disabled::placeholder, 
+.liwe3-form-input.disabled::placeholder {
+  color: var(--liwe-light-color);
+}
+
 
 /* Basic editor styles */
 .ProseMirror {

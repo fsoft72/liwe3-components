@@ -1,0 +1,16 @@
+{
+  "name": "@liwe/dropdown-button",
+  "version": "0.0.1",
+  "description": "A LiWE3 DropdownButton component",
+  "author": "Giulio Porta",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.esm.js",
+  "types": "index.d.ts",
+  "private": false,
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@liwe/react-button": "^0.0.18"
+  }
+}

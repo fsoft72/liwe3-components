@@ -1,0 +1,55 @@
+.liwe3-dropdown-button {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+
+.liwe3-dropdown-button > .liwe3-dropdown-menu {
+    background-color: var(--liwe-lighter-secondary-color);
+    color: var(--liwe-default-color);
+    border-radius: var(--liwe-border-radius);
+    border: 1px solid var(--liwe-darker-primary-color);
+    overflow: hidden;
+    height: fit-content;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all .3s ease;
+}
+
+.liwe3-dropdown-button > .liwe3-dropdown-menu.show {
+    transform-origin: top;
+    transform: scaleY(1);
+}
+
+.liwe3-dropdown-button > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.liwe3-dropdown-button > ul > li {
+    display: block;
+    color: var(--liwe-default-color);
+    transition: all 0.5s ease;
+}
+
+.liwe3-dropdown-button > ul > li:hover {
+    background-color: var(--liwe-darker-secondary-color);
+}
+
+.liwe3-dropdown-button > ul > li:not(:last-child)  {
+    border-bottom: 1px solid var(--liwe-darker-primary-color);
+}
+
+.liwe3-dropdown-button > ul > li > a {
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    color: var(--liwe-default-color);
+    transition: all 0.5s ease;
+}
+
+.liwe3-dropdown-button > ul > li > a:hover {
+    color: var(--liwe-light-color);
+}

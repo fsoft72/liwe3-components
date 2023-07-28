@@ -1,0 +1,72 @@
+.liwe3-form-hint {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: var(--liwe-font-weight);
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: left;
+  color: var(--liwe-light-color); }
+
+.liwe3-form-hint.show {
+  display: block; }
+
+.liwe3-form-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--liwe-default-color);
+  border-radius: var(--liwe-border-radius);
+  background-color: var(--liwe-lighter-secondary-color);
+  color: var(--liwe-default-color);
+  font-size: var(--liwe-font-size);
+  font-weight: var(--liwe-font-weight);
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: left; }
+  .liwe3-form-input::placeholder {
+    color: var(--liwe-light-color); }
+
+.liwe3-form-input:focus {
+  outline: none;
+  border: 1px solid var(--liwe-primary-color); }
+
+.liwe3-form-input.error {
+  border: 1px solid var(--liwe-danger-color); }
+
+.liwe3-form-input.error:focus {
+  outline: none;
+  border: 1px solid var(--liwe-danger-color); }
+
+.liwe3-form-input.success {
+  border: 1px solid var(--liwe-success-color); }
+
+.liwe3-form-input.success:focus {
+  outline: none;
+  border: 1px solid var(--liwe-success-color); }
+
+.liwe3-form-input.warning {
+  border: 1px solid var(--liwe-warning-color); }
+
+.liwe3-form-input.warning:focus {
+  outline: none;
+  border: 1px solid var(--liwe-warning-color); }
+
+.liwe3-form-input.info {
+  border: 1px solid var(--liwe-info-color); }
+
+.liwe3-form-input.info:focus {
+  outline: none;
+  border: 1px solid var(--liwe-info-color); }
+
+.liwe3-form-input:disabled,
+.liwe3-form-input.disabled {
+  border: 1px solid var(--liwe-light-color);
+  background-color: var(--liwe-light-color);
+  color: var(--liwe-default-color); }
+
+.liwe3-form-input.disabled:focus {
+  outline: none;
+  border: 1px solid var(--liwe-light-color); }
+
+.liwe3-form-input:disabled::placeholder,
+.liwe3-form-input.disabled::placeholder {
+  color: var(--liwe-light-color); }
