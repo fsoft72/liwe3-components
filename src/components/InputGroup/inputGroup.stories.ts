@@ -12,20 +12,18 @@ type Story = StoryObj<typeof InputGroup>;
 
 const button01: TypeInputGroupButton =
 {
-	label: '@',
+	label: 'user@',
 	position: 'prepend',
-	onClick: () => console.log( 'Button 1' ),
-	action: 'button',
+	onClick: () => alert( 'Button 1' ),
+	disabled: true,
 };
 
 const button02: TypeInputGroupButton =
 {
 	label: '.com',
 	position: 'append',
-	onClick: () => console.log( 'Button 2' ),
-	action: 'button',
+	onClick: () => alert( 'Button 2' ),
 };
-
 
 export const FirstStory: Story = {
 	args: {
@@ -37,7 +35,8 @@ export const FirstStory: Story = {
 			'rel-test': 'rel',
 		},
 		id: 'test-button',
+		status: 'warning',
+		message: 'This is a warning message',
 		buttons: [ button01, button02 ],
-
 	},
 };
