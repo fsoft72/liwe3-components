@@ -1,4 +1,4 @@
-import React, {forwardRef, useRef} from 'react';
+import React, {forwardRef, useState, useMemo} from 'react';
 import Input, { InputProps } from '@liwe/react-input';
 import Button, { ButtonProps } from '@liwe/react-button';
 
@@ -38,24 +38,46 @@ export interface InputGroupProps extends InputProps {
  */
 const InputGroup = forwardRef((props: InputGroupProps, ref: any) => {
     const { buttons, ...inputProps } = props;
-    const { label } = inputProps;
+    const { label, value, name } = inputProps;
+    const [inputValue, setInputValue] = useState(value);
     inputProps.label = '';
+
+    const buttonsAppend = useMemo(() => {
+        return buttons?.map((button, index) => {
+            return button?.position === 'append' ? <Button key={index} {...button} size={'xs'} /> : null;
+        });
+    }, [buttons]);
+
+    const buttonsPrepend = useMemo(() => {
+        return buttons?.map((button, index) => {
+            return button?.position === 'prepend' ? <Button key={index} {...button} size={'xs'} /> : null;
+        });
+    }, [buttons]);
+
+
+    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (inputProps.onChange) {
+            inputProps.onChange(e);
+        }
+        const prepend = (buttons?.[0]?.position === 'prepend' ? buttons?.[0]?.label : '') + (buttons?.[1]?.position === 'prepend' ? buttons?.[1]?.label : '');
+        const append = (buttons?.[0]?.position === 'append' ? buttons?.[0]?.label : '') + (buttons?.[1]?.position === 'append' ? buttons?.[1]?.label : '');
+        const value =  prepend + e.target.value + append;
+        setInputValue(value); 
+    };
+
     return (
         <div className="liwe3-input-group-container">
             <div className='liwe3-input-group-label'>{label}</div>
             <div className="liwe3-input-group">
                 <div className="liwe3-input-group-prepend">
-                    {buttons?.map((button, index) => {
-                        return button?.position === 'prepend' ? <Button key={index} {...button} size={'xs'} /> : null;
-                    })}
+                    {buttonsPrepend}
                 </div>
-                <Input {...inputProps} ref={ref} />
+                <Input {...inputProps} ref={ref} onChange={handleOnChange} name={`__${name}`}/>
                 <div className="liwe3-input-group-append">
-                    {buttons?.map((button, index) => {
-                        return button?.position === 'append' ? <Button key={index} {...button} size={'xs'} /> : null;
-                    })}
+                    {buttonsAppend}
                 </div>
             </div>
+            <input value={inputValue} name={name} type="hidden" />
         </div>
     );
 });

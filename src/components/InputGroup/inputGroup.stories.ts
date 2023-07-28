@@ -28,6 +28,7 @@ const button02: TypeInputGroupButton =
 export const FirstStory: Story = {
 	args: {
 		label: 'Generic InputGroup',
+		name: 'test-input',
 		size: 'block',
 		type: 'email',
 		attrs: {
@@ -38,5 +39,6 @@ export const FirstStory: Story = {
 		status: 'warning',
 		message: 'This is a warning message',
 		buttons: [ button01, button02 ],
+		onChange: ( e ) => console.log( e.target.value ),
 	},
 };
