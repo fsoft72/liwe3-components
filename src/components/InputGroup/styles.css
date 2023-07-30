@@ -51,6 +51,11 @@
     border-radius: 0 !important;
 }
 
+.liwe3-input-group-prepend button:disabled,
+.liwe3-input-group-append button:disabled {
+    cursor: default !important;
+}
+
 .liwe3-input-group-prepend button:first-child {
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;

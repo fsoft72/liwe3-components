@@ -44,13 +44,13 @@ const InputGroup = forwardRef((props: InputGroupProps, ref: any) => {
 
     const buttonsAppend = useMemo(() => {
         return buttons?.map((button, index) => {
-            return button?.position === 'append' ? <Button key={index} {...button} size={'xs'} /> : null;
+            return button?.position === 'append' ? <Button key={index} disabled={true} {...button} size={'xs'} /> : null;
         });
     }, [buttons]);
 
     const buttonsPrepend = useMemo(() => {
         return buttons?.map((button, index) => {
-            return button?.position === 'prepend' ? <Button key={index} {...button} size={'xs'} /> : null;
+            return button?.position === 'prepend' ? <Button key={index} disabled={true} {...button} size={'xs'} /> : null;
         });
     }, [buttons]);
 

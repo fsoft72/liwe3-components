@@ -15,7 +15,6 @@ const button01: TypeInputGroupButton =
 	label: 'user@',
 	position: 'prepend',
 	onClick: () => alert( 'Button 1' ),
-	disabled: true,
 };
 
 const button02: TypeInputGroupButton =
