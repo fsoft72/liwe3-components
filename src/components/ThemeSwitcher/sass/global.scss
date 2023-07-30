@@ -190,7 +190,7 @@ button {
     font-size: var(--liwe-font-size);
 }
 
-button:hover {
+button:hover:not(:disabled) {
     background-color: var(--liwe-lighter-primary-color);
     color: var(--liwe-default-color);
 }
