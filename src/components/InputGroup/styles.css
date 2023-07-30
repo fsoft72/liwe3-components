@@ -19,6 +19,10 @@
     flex: 1;
 }
 
+.liwe3-form-hint {
+    text-align: center;
+}
+
 .liwe3-input-group-append,
 .liwe3-input-group-prepend {
     display: flex;
@@ -27,14 +31,11 @@
     justify-content: center;
     flex: 0;
     padding: .5rem 0;
+    white-space: nowrap;
 }
 
 .liwe3-input-group-append {
-    margin-left: .54rem;
-}
-
-.liwe3-input-group-prepend {
-    margin-right: 1rem;
+    margin-left: 1.6rem;
 }
 
 .liwe3-input-group-prepend button,
