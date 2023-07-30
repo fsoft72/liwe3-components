@@ -34,8 +34,8 @@ const Input = forwardRef(( props: InputProps, ref: React.Ref<HTMLInputElement>) 
 	const { label, size, mode, status, message, attrs, ...rest } = props;	
 	const prepCssClasses = () => {
         const res= { input: '', status: '', container: '' };
-        res.container = `liwe3-input-container ${sizeMap[size ? size : 'block']}`;
-		res.input = `liwe3-form-input ${(mode ? 'liwe3-bg-' + mode : '')} ${(status ? status : '')}`;
+        res.container = `liwe3-input-container liwe3-row`;
+		res.input = `liwe3-form-input ${(mode ? 'liwe3-bg-' + mode : '')} ${(status ? status : '')} ${sizeMap[size ? size : 'block']}`;
 		res.status = `liwe3-form-hint liwe3-txt-${(status ? status : '')} ${(status ? 'show' : '')}`;
         return res;
 	};
