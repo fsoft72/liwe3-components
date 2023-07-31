@@ -2,6 +2,8 @@ import React, { useRef, forwardRef } from 'react';
 
 type TypeInputProps = Omit<React.ComponentPropsWithRef<'input'>, 'size'> & {
 	label: string;
+    name: string;
+    filter: string;
 	size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'block';
 	mode?: 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark';
     status?: 'error' | 'success' | 'warning' | 'info';
@@ -31,7 +33,17 @@ const sizeMap = {
  * @returns React.FC
  */
 const Input = forwardRef(( props: InputProps, ref: React.Ref<HTMLInputElement>) => {
-	const { label, size, mode, status, message, attrs, ...rest } = props;	
+	const { label, name, filter, size, mode, status, message, attrs, ...rest } = props;	
+    const regex = filter ? new RegExp(filter) : null;
+
+    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement> & { data:string}) => {
+        if (!regex) return;
+        const char = e?.data;
+        if (!regex.test(char)) {
+            e.preventDefault();
+        }
+    };
+
 	const prepCssClasses = () => {
         const res= { input: '', status: '', container: '' };
         res.container = `liwe3-input-container liwe3-row`;
@@ -48,6 +60,7 @@ const Input = forwardRef(( props: InputProps, ref: React.Ref<HTMLInputElement>) 
                 ref = {ref}
                 {...attrs} 
                 {...rest}
+                onBeforeInput={handleKeyPress}
             />
             <div className={cssClasses.status}>{message}</div>
         </div>
