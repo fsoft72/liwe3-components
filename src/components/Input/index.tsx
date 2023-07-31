@@ -34,17 +34,7 @@ const sizeMap = {
  */
 const Input = forwardRef(( props: InputProps, ref: React.Ref<HTMLInputElement>) => {
 	const { label, name, filter, size, mode, status, message, attrs, ...rest } = props;	
-    const regExpChar = filter ? new RegExp(filter) : null;
     const regExpValue = filter ? new RegExp(filter, 'g') : null;
-
-
-    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement> & { data:string}) => {
-        if (!regExpChar) return;
-        const char = e?.data;
-        if (!regExpChar.test(char)) {
-            e.preventDefault();
-        }
-    };
 
     const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (regExpValue) {
@@ -70,7 +60,6 @@ const Input = forwardRef(( props: InputProps, ref: React.Ref<HTMLInputElement>) 
                 ref = {ref}
                 {...attrs} 
                 {...rest}
-                onBeforeInput={handleKeyPress}
                 onChange={handleOnChange}
             />
             <div className={cssClasses.status}>{message}</div>
