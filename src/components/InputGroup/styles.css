@@ -1,0 +1,67 @@
+.liwe3-input-group-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.liwe3-input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.liwe3-input-group-label {
+    flex: 1;
+}
+
+.liwe3-form-hint {
+    text-align: center;
+}
+
+.liwe3-input-group-append,
+.liwe3-input-group-prepend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 0;
+    padding: .5rem 0;
+    white-space: nowrap;
+}
+
+.liwe3-input-group-append {
+    margin-left: 1.6rem;
+}
+
+.liwe3-input-group-prepend button,
+.liwe3-input-group-append button {
+    padding: 0.5rem 1rem;
+    font-size: 1em; 
+    line-height: 1.2rem;
+}
+
+.liwe3-input-group input,
+.liwe3-input-group-prepend button:not(:first-child),
+.liwe3-input-group-append button:not(:last-child) {
+    border-radius: 0 !important;
+}
+
+.liwe3-input-group-prepend button:disabled,
+.liwe3-input-group-append button:disabled {
+    cursor: default !important;
+}
+
+.liwe3-input-group-prepend button:first-child {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.liwe3-input-group-append button:last-child {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
