@@ -9,7 +9,7 @@ const meta: Meta<typeof Input> = {
 export default meta;
 type Story = StoryObj<typeof Input>;
 
-export const Defualt: Story = {
+export const Filtered: Story = {
 	args: {
 		label: 'Generic Input',
 		attrs: {
@@ -18,6 +18,10 @@ export const Defualt: Story = {
 		},
 		id: 'test-input',
 		size: 'md',
+		onChange: ( value ) => console.log( value ),
+		filter: '[1-9A-Z]',
+		status: 'info',
+		message: 'Only capital letters and numbers are allowed',
 	},
 };
 export const Warning: Story = {
