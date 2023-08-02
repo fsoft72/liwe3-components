@@ -17,22 +17,6 @@ export interface InputGroupProps extends InputProps {
  * It will accept as main props the props of Input component and an array of buttons with their own props.
  * The buttons will be displayed before or after the input depending on the position property.
  * 
- * Component props as reference (see Input component for more details):
- *  label: string;
- *  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'block';
- *  mode?: 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark';
- *  status?: 'error' | 'success' | 'warning' | 'info';
- *  message?: string;
- *  attrs?: {};
- *  buttons: TypeInputGroupButtons;
- * 
- * Single item (TypeInputGroupButton) in buttons list props as reference (see Button component for more details):
- *  label: string;
- *  size?: 'xs' | 'sm' | 'md' | 'ld' | 'xl' | 'block';
- *  mode?: 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark';
- *  attrs?: {};
- *  position: 'prepend' | 'append';
- * 
  * @param {InputGroupProps} props
  * @returns {React.FC}
  */
@@ -54,15 +38,18 @@ const InputGroup = forwardRef((props: InputGroupProps, ref: any) => {
         });
     }, [buttons]);
 
-
     const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (inputProps.onChange) {
-            inputProps.onChange(e);
-        }
-        const prepend = (buttons?.[0]?.position === 'prepend' ? buttons?.[0]?.label : '') + (buttons?.[1]?.position === 'prepend' ? buttons?.[1]?.label : '');
-        const append = (buttons?.[0]?.position === 'append' ? buttons?.[0]?.label : '') + (buttons?.[1]?.position === 'append' ? buttons?.[1]?.label : '');
+        const prepend = 
+            (buttons?.[0]?.position === 'prepend' && typeof buttons?.[0].label === 'string' ? buttons?.[0]?.label : '') + 
+            (buttons?.[1]?.position === 'prepend' && typeof buttons?.[1].label === 'string' ? buttons?.[1]?.label : '');
+        const append = 
+            (buttons?.[0]?.position === 'append' && typeof buttons?.[0].label === 'string' ? buttons?.[0]?.label : '') + 
+            (buttons?.[1]?.position === 'append' && typeof buttons?.[1].label === 'string' ? buttons?.[1]?.label : '');
         const value =  prepend + e.target.value + append;
-        setInputValue(value); 
+        setInputValue(value);
+        if (inputProps.onChange) {
+            inputProps.onChange(value);
+        }
     };
 
     return (

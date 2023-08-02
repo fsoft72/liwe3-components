@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import InputGroup, { TypeInputGroupButton } from './index';
+import MkIcon from '../../icons/Inbox';
 
 //👇 This default export determines where your story goes in the story list
 const meta: Meta<typeof InputGroup> = {
 	component: InputGroup,
 };
-
+const myIcon = MkIcon( { w: 15, h: 15 } );
 export default meta;
 type Story = StoryObj<typeof InputGroup>;
 
@@ -19,7 +19,7 @@ const button01: TypeInputGroupButton =
 
 const button02: TypeInputGroupButton =
 {
-	label: '.com',
+	label: myIcon,
 	position: 'append',
 	onClick: () => alert( 'Button 2' ),
 };
@@ -30,10 +30,6 @@ export const FirstStory: Story = {
 		name: 'test-input',
 		size: 'block',
 		type: 'email',
-		attrs: {
-			'data-test': 'test',
-			'rel-test': 'rel',
-		},
 		id: 'test-button',
 		status: 'warning',
 		message: 'This is a warning message',
