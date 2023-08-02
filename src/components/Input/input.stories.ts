@@ -18,6 +18,7 @@ export const Filtered: Story = {
 		},
 		id: 'test-input',
 		size: 'md',
+		onChange: ( value ) => console.log( value ),
 		filter: '[1-9A-Z]',
 		status: 'info',
 		message: 'Only capital letters and numbers are allowed',
