@@ -24,7 +24,7 @@ const button02: TypeInputGroupButton =
 	onClick: () => alert( 'Button 2' ),
 };
 
-export const FirstStory: Story = {
+export const TwoButtons: Story = {
 	args: {
 		label: 'Generic InputGroup',
 		name: 'test-input',
@@ -34,6 +34,20 @@ export const FirstStory: Story = {
 		status: 'warning',
 		message: 'This is a warning message',
 		buttons: [ button01, button02 ],
+		onChange: ( e ) => console.log( e.target.value ),
+	},
+};
+
+export const OneButton: Story = {
+	args: {
+		label: 'Generic InputGroup',
+		name: 'test-input',
+		size: 'block',
+		type: 'email',
+		id: 'test-button',
+		status: 'warning',
+		message: 'This is a warning message',
+		buttons: [ button02 ],
 		onChange: ( e ) => console.log( e.target.value ),
 	},
 };

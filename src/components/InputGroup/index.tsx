@@ -47,9 +47,7 @@ const InputGroup = forwardRef((props: InputGroupProps, ref: any) => {
             (buttons?.[1]?.position === 'append' && typeof buttons?.[1].label === 'string' ? buttons?.[1]?.label : '');
         const value =  prepend + e.target.value + append;
         setInputValue(value);
-        if (inputProps.onChange) {
-            inputProps.onChange(value);
-        }
+        inputProps.onChange && inputProps.onChange(value);
     };
 
     return (

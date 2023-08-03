@@ -19,8 +19,9 @@
     flex: 1;
 }
 
-.liwe3-form-hint {
+.liwe3-input-group .liwe3-form-hint {
     text-align: center;
+    padding: 0;
 }
 
 .liwe3-input-group-append,
