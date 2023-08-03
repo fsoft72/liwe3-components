@@ -38,15 +38,20 @@ const InputGroup = forwardRef((props: InputGroupProps, ref: any) => {
         });
     }, [buttons]);
 
-    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleOnChange = (e:string | React.ChangeEvent<HTMLInputElement>) => {
+        // get value based on argument type
+        const stringValue = typeof e === 'string' ? e : e?.target?.value;
+        // build prepend and append strings
         const prepend = 
             (buttons?.[0]?.position === 'prepend' && typeof buttons?.[0].label === 'string' ? buttons?.[0]?.label : '') + 
             (buttons?.[1]?.position === 'prepend' && typeof buttons?.[1].label === 'string' ? buttons?.[1]?.label : '');
         const append = 
             (buttons?.[0]?.position === 'append' && typeof buttons?.[0].label === 'string' ? buttons?.[0]?.label : '') + 
             (buttons?.[1]?.position === 'append' && typeof buttons?.[1].label === 'string' ? buttons?.[1]?.label : '');
-        const value =  prepend + e.target.value + append;
+        // build final value
+        const value =  prepend + stringValue + append;
         setInputValue(value);
+        // if onChange is defined in props, call it and pass the final value
         inputProps.onChange && inputProps.onChange(value);
     };
 
