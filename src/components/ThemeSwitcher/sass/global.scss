@@ -558,8 +558,6 @@ button:hover:not(:disabled) {
   line-height: $liweDefaultLineHeight;
   letter-spacing: 0;
   text-align: $liweDefaultTextAlign;
-  margin: .3rem 0;
-
   &::placeholder {
     color: var(--liwe-light-color);
   }
