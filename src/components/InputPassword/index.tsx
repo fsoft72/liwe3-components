@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import {InputProps} from '@liwe/react-input';
 import InputGroup, {InputGroupProps} from '@liwe/react-input-group';
 
 type ReservedProps = 'buttons' 
 type InputPasswordPropsType = Omit<InputGroupProps, ReservedProps> & {};
 export interface InputPasswordProps extends InputPasswordPropsType {};
 
-const filterRegExp:string='[a-zA-Z0-9]';
 const Eye = () => {
     return (
-        <div style={{ width: '15px', height: '15px', display: "inline-block" }}>
+        <div style={{ width: '20px', height: '20px', display: "inline-block" }}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
                 <path fillRule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clipRule="evenodd"/>
@@ -20,7 +18,7 @@ const Eye = () => {
 
 const EyeSlash = () => {
     return (
-        <div style={{ width: '15px', height: '15px', display: "inline-block" }}>
+        <div style={{ width: '20px', height: '20px', display: "inline-block" }}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M3.53 2.47a.75.75 0 00-1.06 1.06l18 18a.75.75 0 101.06-1.06l-18-18zM22.676 12.553a11.249 11.249 0 01-2.631 4.31l-3.099-3.099a5.25 5.25 0 00-6.71-6.71L7.759 4.577a11.217 11.217 0 014.242-.827c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113z"/>
                 <path d="M15.75 12c0 .18-.013.357-.037.53l-4.244-4.243A3.75 3.75 0 0115.75 12zM12.53 15.713l-4.243-4.244a3.75 3.75 0 004.243 4.243z"/>
@@ -31,8 +29,7 @@ const EyeSlash = () => {
 } 
 
 const InputPassword = (props: InputPasswordProps) => {
-    const { type, filter, ...inputProps } = props;
-    const defaultFilter: string = filter || filterRegExp;
+    const { type, ...inputProps } = props;
     const [show, setShow] = useState('password');
     const [icon, setIcon] = useState(Eye());
 
@@ -49,7 +46,6 @@ const InputPassword = (props: InputPasswordProps) => {
     return (
         <InputGroup
             {...inputProps}
-            filter = {defaultFilter} 
             type = {show}
             buttons = {[
                 {
